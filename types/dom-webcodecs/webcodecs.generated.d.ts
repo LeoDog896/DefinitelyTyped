@@ -105,10 +105,10 @@ interface PlaneLayout {
 }
 
 interface VideoColorSpaceInit {
-    fullRange?: boolean | null | undefined;
-    matrix?: VideoMatrixCoefficients | null | undefined;
-    primaries?: VideoColorPrimaries | null | undefined;
-    transfer?: VideoTransferCharacteristics | null | undefined;
+    fullRange?: boolean | undefined;
+    matrix?: VideoMatrixCoefficients | undefined;
+    primaries?: VideoColorPrimaries | undefined;
+    transfer?: VideoTransferCharacteristics | undefined;
 }
 
 interface VideoDecoderConfig {

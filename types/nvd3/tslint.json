@@ -18,6 +18,7 @@
         "radix": false,
         "semicolon": false,
         "space-before-function-paren": false,
+        "trim-file": false,
         "triple-equals": false,
         "typedef-whitespace": false,
         "unified-signatures": false,

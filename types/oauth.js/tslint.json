@@ -8,6 +8,7 @@
         "no-var-keyword": false,
         "npm-naming": false,
         "semicolon": false,
+        "trim-file": false,
         "unified-signatures": false
     }
 }

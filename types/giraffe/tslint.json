@@ -13,6 +13,7 @@
         "object-literal-key-quotes": false,
         "semicolon": false,
         "space-within-parens": false,
+        "trim-file": false,
         "typedef-whitespace": false,
         "whitespace": false
     }

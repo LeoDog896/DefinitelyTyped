@@ -5,6 +5,7 @@
         "no-padding": false,
         "npm-naming": false,
         "semicolon": false,
+        "trim-file": false,
         "typedef-whitespace": false
     }
 }

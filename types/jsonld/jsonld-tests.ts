@@ -134,11 +134,6 @@ jsonld.frame(doc, frame, {requireAll: true})
     log(res);
 });
 
-jsonld.frame(doc, frame, {omitGraph: false})
-.then((res) => {
-    log(res);
-});
-
 /**
  * normalize() test
  */

@@ -2,10 +2,6 @@ import * as babel from '@babel/core';
 import * as t from '@babel/types';
 
 const options: babel.TransformOptions = {
-    assumptions: {
-        noDocumentAll: true,
-        noClassCalls: true
-    },
     ast: true,
     sourceMaps: true,
     inputSourceMap: {

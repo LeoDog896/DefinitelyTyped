@@ -11,6 +11,7 @@
         "no-var-keyword": false,
         "prefer-const": false,
         "prefer-template": false,
-        "semicolon": false
+        "semicolon": false,
+        "trim-file": false
     }
 }

@@ -1,6 +1,12 @@
-import { JSON_WEB_OBJECT, NightwatchSizeAndPosition, ElementResult } from 'nightwatch';
+import { NightwatchAPI, JSON_WEB_OBJECT, NightwatchCallbackResult, NightwatchSizeAndPosition, ElementResult } from "nightwatch";
 
-import { isNightwatchAPI, isType, isNightwatchCallbackResult } from './utils';
+function isNightwatchAPI(v: NightwatchAPI) {}
+function isNightwatchCallbackResult<T>(result: NightwatchCallbackResult<T>): T | void {
+    if (result.status === 0) {
+        return result.value;
+    }
+}
+function isType<T>(v: T): T { return v; }
 
 //
 // .clearValue

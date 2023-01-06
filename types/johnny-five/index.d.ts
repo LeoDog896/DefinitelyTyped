@@ -1,18 +1,17 @@
 // Type definitions for johnny-five 1.3.0
 // Project: https://github.com/rwaldron/johnny-five
 // Definitions by: Toshiya Nakakura <https://github.com/nakakura>
+//                 Zoltan Ujvary <https://github.com/ujvzolee>
 //                 Simon Colmer <https://github.com/workshop2>
 //                 XtrimSystems <https://github.com/xtrimsystems>
 //                 Marcin Obiedziński <https://github.com/marcinobiedz>
 //                 Nicholas Hehr <https://github.com/HipsterBrown>
-//                 Scott González <https://github.com/scottgonzalez>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 3.5
 
 ///<reference types="node"/>
 
 export interface AccelerometerOption {
-    board?: Board | undefined;
     controller: string;
 }
 
@@ -60,7 +59,6 @@ export declare class Accelerometer {
 }
 
 export interface AltimeterOption {
-    board?: Board | undefined;
     controller: string;
     address?: number | undefined;
     freq?: number | undefined;
@@ -111,13 +109,6 @@ export interface BoardOption {
     io?: any;
 }
 
-export interface BoardLogEvent {
-    type: 'info' | 'warn' | 'fail';
-    timestamp: number;
-    class: string;
-    message: string;
-}
-
 export declare class Board {
     constructor(option?: BoardOption);
 
@@ -128,15 +119,9 @@ export declare class Board {
     pins: Array<Pin>;
     port: string;
 
-    on(event: "close", cb: () => void): this;
-    on(event: "connect", cb: () => void): this;
-    on(event: "error", cb: (error: Error) => void): this;
-    on(event: "exit", cb: () => void): this;
-    on(event: "fail", cb: (event: BoardLogEvent) => void): this;
-    on(event: "info", cb: (event: BoardLogEvent) => void): this;
-    on(event: "message", cb: (event: BoardLogEvent) => void): this;
+    on(event: string, cb: () => void): this;
     on(event: "ready", cb: () => void): this;
-    on(event: "warn", cb: (event: BoardLogEvent) => void): this;
+    on(event: "connect", cb: () => void): this;
     pinMode(pin: number | string, mode: number): void;
     analogWrite(pin: number | string, value: number): void;
     analogRead(pin: number | string, cb: (item: number) => void): void;
@@ -150,7 +135,6 @@ export declare class Board {
 }
 
 export interface ButtonOption {
-    board?: Board | undefined;
     pin: number | string;
     invert?: boolean | undefined;
     isPullup?: boolean | undefined;
@@ -205,7 +189,6 @@ export declare class Collection<Base = {}> {
 }
 
 export interface CompassOption {
-    board?: Board | undefined;
     controller: string;
     gauss?: number | undefined;
 }
@@ -222,7 +205,6 @@ export declare class Compass {
 }
 
 export interface ESCOption {
-    board?: Board | undefined;
     pin: number | string;
     pwmRange?: Array<number> | undefined;
     address?: string | undefined;
@@ -274,7 +256,6 @@ export declare class Fn {
 }
 
 export interface GyroGeneralOption {
-    board?: Board | undefined;
     controller?: string | undefined;
 }
 
@@ -309,7 +290,6 @@ export declare class Gyro {
 }
 
 export interface HygrometerOption {
-    board?: Board | undefined;
     controller?: string | undefined;
     freq?: number | undefined;
 }
@@ -380,7 +360,6 @@ export declare module IR {
 }
 
 export interface JoystickOption {
-    board?: Board | undefined;
     pins: Array<string>;
     invert?: boolean | undefined;
     invertX?: boolean | undefined;
@@ -403,7 +382,6 @@ export declare class Joystick {
 }
 
 export interface LCDGeneralOption {
-    board?: Board | undefined;
     rows?: number | undefined;
     cols?: number | undefined;
 }
@@ -444,8 +422,7 @@ export declare class LCD {
 }
 
 export interface LedOption {
-    board?: Board | undefined;
-    pin: number | string;
+    pin: number;
     type?: string | undefined;
     controller?: string | undefined;
     address?: number | undefined;
@@ -453,35 +430,28 @@ export interface LedOption {
 }
 
 export declare class Led {
-    constructor(option: LedOption['pin'] | LedOption);
+    constructor(option: number | LedOption);
 
-    animation: Animation;
     id: string;
-    isOn: boolean;
-    isRunning: boolean;
-    mode: Pin['mode'];
     pin: number;
-    value: number;
 
-    blink(ms?: number, callback?: () => void): this;
-    blink(callback?: () => void): this;
-    brightness(val: number): this;
-    fade(brightness: number, ms?: number, callback?: () => void): this;
-    fadeIn(ms?: number, callback?: () => void): this;
-    fadeOut(ms?: number, callback?: () => void): this;
-    off(): this;
-    on(): this;
-    pulse(ms?: number, callback?: () => void): this;
-    stop(): this;
-    strobe(ms?: number, callback?: () => void): this;
-    strobe(callback?: () => void): this;
-    toggle(): this;
+    on(): void;
+    off(): void;
+    toggle(): void;
+    strobe(ms: number): void;
+    blink(): void;
+    blink(ms: number): void;
+    brightness(val: number): void;
+    fade(brightness: number, ms: number): void;
+    fadeIn(ms: number): void;
+    fadeOut(ms: number): void;
+    pulse(ms: number): void;
+    stop(): void;
 }
 
 export declare module Led {
 
     export interface DigitsOption {
-        board?: Board | undefined;
         pins: any;
         devices?: number | undefined;
         controller?: string | undefined;
@@ -507,13 +477,11 @@ export declare module Led {
     }
 
     export interface MatrixOption {
-        board?: Board | undefined;
         pins: any;
         devices?: number | undefined;
     }
 
     export interface MatrixIC2Option {
-        board?: Board | undefined;
         controller: string;
         addresses?: Array<any> | undefined;
         isBicolor?: boolean | undefined;
@@ -546,8 +514,7 @@ export declare module Led {
     }
 
     export interface RGBOption {
-        board?: Board | undefined;
-        pins: Array<number> | { blue: number; green: number; red: number; };
+        pins: Array<number>;
         isAnode?: boolean | undefined;
         controller?: string | undefined;
     }
@@ -574,11 +541,10 @@ export declare module Led {
 }
 
 export interface MotionOption {
-    board?: Board | undefined;
     pin: number | string;
 }
 
-export declare class Motion {
+export class Motion {
     constructor(option: number | MotionOption);
     on(event: string, cb: () => void): this;
     on(event: "data", cb: (data: any) => void): this;
@@ -595,7 +561,6 @@ export interface MotorPins {
 }
 
 export interface MotorOption {
-    board?: Board | undefined;
     pins: MotorPins;
     current?: SensorOption | undefined;
     invertPWM?: boolean | undefined;
@@ -636,7 +601,6 @@ export declare class Motors {
 }
 
 export interface OrientiationOption {
-    board?: Board | undefined;
     controller?: string | undefined;
     freq?: number | undefined;
 }
@@ -654,13 +618,7 @@ export declare class Orientiation {
 }
 
 export interface PiezoOption {
-    board?: Board | undefined;
     pin: number;
-}
-
-export interface PiezoTune {
-    tempo?: number;
-    song: [frequency: string | null, duration: number][];
 }
 
 export declare class Piezo {
@@ -672,8 +630,8 @@ export declare class Piezo {
     readonly isPlaying: boolean;
 
     frequency(frequency: number, duration: number): void;
-    play(tune: PiezoTune, cb?: () => void): void;
-    tone(tone: number, duration: number): void;
+    play(tune: any, cb?: () => void): void;
+    tone(frequency: number, duration: number): void;
     noTone(): void;
     off(): void;
 }
@@ -725,7 +683,6 @@ export declare class Ping {
 }
 
 export declare interface ProximityOption {
-    board?: Board | undefined;
     pin: number | string;
     controller: string;
     freq?: number | undefined;
@@ -744,7 +701,6 @@ export declare class Proximity {
 }
 
 export interface RelayOption {
-    board?: Board | undefined;
     pin: number | string;
     type?: string | undefined;
 }
@@ -767,7 +723,6 @@ export interface Repl {
 }
 
 export interface SensorOption {
-    board?: Board | undefined;
     pin: number | string;
     freq?: boolean | undefined;
     threshold?: number | undefined;
@@ -798,7 +753,6 @@ export declare class Sensor {
 }
 
 export interface ServoGeneralOption {
-    board?: Board | undefined;
     pin: number | string;
     range?: Array<number> | undefined;
     type?: string | undefined;
@@ -849,7 +803,6 @@ export declare class Servo {
 }
 
 export interface ShiftRegisterOption {
-    board?: Board | undefined;
     pins: any;
     isAnode?: boolean | undefined;
 }
@@ -869,7 +822,6 @@ export declare class ShiftRegister {
 }
 
 export interface SonarOption {
-    board?: Board | undefined;
     pin: number | string;
     device: string;
     freq?: number | undefined;
@@ -887,7 +839,6 @@ export declare class Sonar {
 }
 
 export interface StepperOption {
-    board?: Board | undefined;
     pins: any;
     stepsPerRev: number;
     type: number;
@@ -927,7 +878,6 @@ export declare class Stepper {
 }
 
 export interface SwitchOption {
-    board?: Board | undefined;
     pin: number | string;
     type?: "NO" | "NC" | undefined;
 }
@@ -945,7 +895,6 @@ export declare class Switch {
 }
 
 export interface ThermometerOption {
-    board?: Board | undefined;
     controller?: string | undefined;
     pin: string | number;
     toCelsius?: ((val: number) => number) | undefined;

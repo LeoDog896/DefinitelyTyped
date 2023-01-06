@@ -7,6 +7,7 @@
         "no-declare-current-package": false,
         "no-single-declare-module": false,
         "space-before-function-paren": false,
-        "strict-export-declare-modifiers": false
+        "strict-export-declare-modifiers": false,
+        "trim-file": false
     }
 }

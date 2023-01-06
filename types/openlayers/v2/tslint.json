@@ -11,6 +11,7 @@
         "no-unnecessary-class": false,
         "no-unnecessary-qualifier": false,
         "strict-export-declare-modifiers": false,
+        "trim-file": false,
         "unified-signatures": false
     }
 }

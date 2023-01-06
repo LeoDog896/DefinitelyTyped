@@ -5,6 +5,7 @@
         "no-trailing-whitespace": false,
         "only-arrow-functions": false,
         "space-before-function-paren": false,
-        "space-within-parens": false
+        "space-within-parens": false,
+        "trim-file": false
     }
 }

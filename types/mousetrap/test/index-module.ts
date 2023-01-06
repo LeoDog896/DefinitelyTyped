@@ -47,11 +47,3 @@ Mousetrap.bind('* a', () => {
 Mousetrap.bind('up up down down left right left right b a enter', () => {
     console.log('konami code');
 });
-
-const handler = (e: ExtendedKeyboardEvent, combo: string) => {
-    return false;
-};
-Mousetrap.bind(['command+k', 'ctrl+k'], handler);
-Mousetrap.bind(['command+k', 'ctrl+k'], e => {
-    return false;
-});

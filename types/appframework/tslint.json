@@ -13,6 +13,7 @@
         "prefer-declare-function": false,
         "semicolon": false,
         "space-within-parens": false,
+        "trim-file": false,
         "unified-signatures": false
     }
 }

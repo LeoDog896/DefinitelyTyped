@@ -18,7 +18,7 @@ export class Branch {
         branchName: string,
         commit: AnnotatedCommit,
         force: number,
-    ): Promise<Reference>;
+    ): Reference;
     static delete(branch: Reference): number;
     static isHead(branch: Reference): number;
     static iteratorNew(repo: Repository, listFlags: number): Promise<any>;

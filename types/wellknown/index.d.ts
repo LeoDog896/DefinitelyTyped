@@ -38,10 +38,5 @@ export type GeoJSONGeometry =
 
 export type GeoJSONGeometryOrNull = GeoJSONGeometry | null;
 
-export interface GeoJSONFeature {
-    type: 'Feature';
-    geometry: GeoJSONGeometry;
-}
-
 export function parse(input: string): GeoJSONGeometryOrNull;
-export function stringify(gj: GeoJSONGeometry | GeoJSONFeature): string;
+export function stringify(gj: GeoJSONGeometry): string;

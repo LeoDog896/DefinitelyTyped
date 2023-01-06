@@ -25,7 +25,11 @@ import {
 } from '../payments/lib';
 
 // https://developer.paypal.com/docs/api/orders/v2/#definition-account_tier
-export type AccountTier = 'BUSINESS' | 'PERSONAL' | 'PREMIER';
+export enum AccountTier {
+    BUSINESS = 'BUSINESS',
+    PERSONAL = 'PERSONAL',
+    PREMIER = 'PREMIER',
+}
 
 // https://developer.paypal.com/docs/api/orders/v2/#definition-ach_debit_response
 export interface AchDebitResponse {
@@ -68,11 +72,30 @@ export interface ThreeDSecureAuthenticationResponse {
     enrollment_status: EnrollmentStatus;
 }
 
-export type AuthenticationStatus = 'Y' | 'N' | 'U' | 'A' | 'C' | 'R' | 'D' | 'I';
+export enum AuthenticationStatus {
+    Y = 'Y',
+    N = 'N',
+    U = 'U',
+    A = 'A',
+    C = 'C',
+    R = 'R',
+    D = 'D',
+    I = 'I',
+}
 
-export type EnrollmentStatus = 'Y' | 'N' | 'U' | 'B';
+export enum EnrollmentStatus {
+    Y = 'Y',
+    N = 'N',
+    U = 'U',
+    B = 'B',
+}
 
-export type LiabilityShift = 'NO' | 'POSSIBLE' | 'UNKNOWN' | 'YES';
+export enum LiabilityShift {
+    NO = 'NO',
+    POSSIBLE = 'POSSIBLE',
+    UNKNOWN = 'UNKNOWN',
+    YES = 'YES',
+}
 
 // https://developer.paypal.com/docs/api/orders/v2/#definition-business_name
 export interface BusinessName {
@@ -80,70 +103,72 @@ export interface BusinessName {
     orthography: Orthography;
 }
 
-export type Orthography =
-    | 'Arab'
-    | 'Armn'
-    | 'Beng'
-    | 'Cans'
-    | 'Cyrl'
-    | 'Deva'
-    | 'Ethi'
-    | 'Geor'
-    | 'Grek'
-    | 'Gujr'
-    | 'Guru'
-    | 'Hani'
-    | 'Hebr'
-    | 'Java'
-    | 'Jpan'
-    | 'Kana'
-    | 'Khmr'
-    | 'Knda'
-    | 'Kore'
-    | 'Laoo'
-    | 'Latn'
-    | 'Mlym'
-    | 'Mong'
-    | 'Mymr'
-    | 'Orya'
-    | 'Sinh'
-    | 'Sund'
-    | 'Syrc'
-    | 'Taml'
-    | 'Telu'
-    | 'Thaa'
-    | 'Thai'
-    | 'Tibt'
-    | 'Yiii'
-    | 'Zyyy'
-    | 'Zzzz';
+export enum Orthography {
+    Arab = 'Arab',
+    Armn = 'Armn',
+    Beng = 'Beng',
+    Cans = 'Cans',
+    Cyrl = 'Cyrl',
+    Deva = 'Deva',
+    Ethi = 'Ethi',
+    Geor = 'Geor',
+    Grek = 'Grek',
+    Gujr = 'Gujr',
+    Guru = 'Guru',
+    Hani = 'Hani',
+    Hebr = 'Hebr',
+    Java = 'Java',
+    Jpan = 'Jpan',
+    Kana = 'Kana',
+    Khmr = 'Khmr',
+    Knda = 'Knda',
+    Kore = 'Kore',
+    Laoo = 'Laoo',
+    Latn = 'Latn',
+    Mlym = 'Mlym',
+    Mong = 'Mong',
+    Mymr = 'Mymr',
+    Orya = 'Orya',
+    Sinh = 'Sinh',
+    Sund = 'Sund',
+    Syrc = 'Syrc',
+    Taml = 'Taml',
+    Telu = 'Telu',
+    Thaa = 'Thaa',
+    Thai = 'Thai',
+    Tibt = 'Tibt',
+    Yiii = 'Yiii',
+    Zyyy = 'Zyyy',
+    Zzzz = 'Zzzz',
+}
 
 // https://developer.paypal.com/docs/api/orders/v2/#definition-business_type
-export type business_type =
-    | 'ANY_OTHER_BUSINESS_ENTITY'
-    | 'ASSOCIATION'
-    | 'CORPORATION'
-    | 'GENERAL_PARTNERSHIP'
-    | 'GOVERNMENT'
-    | 'INDIVIDUAL'
-    | 'LIMITED_LIABILITY_PARTNERSHIP'
-    | 'LIMITED_LIABILITY_PRIVATE_CORPORATION'
-    | 'LIMITED_LIABILITY_PROPRIETORS'
-    | 'LIMITED_PARTNERSHIP'
-    | 'LIMITED_PARTNERSHIP_PRIVATE_CORPORATION'
-    | 'NONPROFIT'
-    | 'ONLY_BUY_OR_SEND_MONEY'
-    | 'OTHER_CORPORATE_BODY'
-    | 'PARTNERSHIP'
-    | 'PRIVATE_CORPORATION'
-    | 'PRIVATE_PARTNERSHIP'
-    | 'PROPRIETORSHIP'
-    | 'PROPRIETORSHIP_CRAFTSMAN'
-    | 'PROPRIETORY_COMPANY'
-    | 'PUBLIC_COMPANY'
-    | 'PUBLIC_CORPORATION'
-    | 'PUBLIC_PARTNERSHIP'
-    | 'REGISTERED_COOPERATIVE';
+export enum business_type {
+    ANY_OTHER_BUSINESS_ENTITY = 'ANY_OTHER_BUSINESS_ENTITY',
+    ASSOCIATION = 'ASSOCIATION',
+    CORPORATION = 'CORPORATION',
+    GENERAL_PARTNERSHIP = 'GENERAL_PARTNERSHIP',
+    GOVERNMENT = 'GOVERNMENT',
+    INDIVIDUAL = 'INDIVIDUAL',
+    LIMITED_LIABILITY_PARTNERSHIP = 'LIMITED_LIABILITY_PARTNERSHIP',
+    LIMITED_LIABILITY_PRIVATE_CORPORATION = 'LIMITED_LIABILITY_PRIVATE_CORPORATION',
+    LIMITED_LIABILITY_PROPRIETORS = 'LIMITED_LIABILITY_PROPRIETORS',
+    LIMITED_PARTNERSHIP = 'LIMITED_PARTNERSHIP',
+    LIMITED_PARTNERSHIP_PRIVATE_CORPORATION = 'LIMITED_PARTNERSHIP_PRIVATE_CORPORATION',
+    NONPROFIT = 'NONPROFIT',
+    ONLY_BUY_OR_SEND_MONEY = 'ONLY_BUY_OR_SEND_MONEY',
+    OTHER_CORPORATE_BODY = 'OTHER_CORPORATE_BODY',
+    PARTNERSHIP = 'PARTNERSHIP',
+    PRIVATE_CORPORATION = 'PRIVATE_CORPORATION',
+    PRIVATE_PARTNERSHIP = 'PRIVATE_PARTNERSHIP',
+    PROPRIETORSHIP = 'PROPRIETORSHIP',
+    PROPRIETORSHIP_CRAFTSMAN = 'PROPRIETORSHIP_CRAFTSMAN',
+    PROPRIETORY_COMPANY = 'PROPRIETORY_COMPANY',
+    PUBLIC_COMPANY = 'PUBLIC_COMPANY',
+    PUBLIC_CORPORATION = 'PUBLIC_CORPORATION',
+    PUBLIC_PARTNERSHIP = 'PUBLIC_PARTNERSHIP',
+    REGISTERED_COOPERATIVE = 'REGISTERED_COOPERATIVE',
+}
 
 // https://developer.paypal.com/docs/api/orders/v2/#definition-card_response
 export interface CardResponse {
@@ -185,7 +210,9 @@ export interface PaymentSource {
 }
 
 // https://developer.paypal.com/docs/api/orders/v2/#definition-contingency
-export type Contingency = '3D_SECURE';
+export enum Contingency {
+    '3D_SECURE' = '3D_SECURE',
+}
 
 // https://developer.paypal.com/docs/api/orders/v2/#definition-document_issuer
 export interface DocumentIssuer {
@@ -195,7 +222,12 @@ export interface DocumentIssuer {
 }
 
 // https://developer.paypal.com/docs/api/orders/v2/#definition-enrolled
-export type Enrolled = 'B' | 'N' | 'U' | 'Y';
+export enum Enrolled {
+    B = 'B',
+    N = 'N',
+    U = 'U',
+    Y = 'Y',
+}
 
 // https://developer.paypal.com/docs/api/orders/v2/#definition-identity_document
 export interface IdentityDocument {
@@ -206,16 +238,20 @@ export interface IdentityDocument {
     expiration_date: string;
 }
 
-export type IdentityDocumentType =
-    | 'INDIVIDUAL_TAXPAYER_IDENTIFICATION_NUMBER'
-    | 'NATIONAL_IDENTIFICATION_NUMBER'
-    | 'PASSPORT_NUMBER'
-    | 'SOCIAL_SECURITY_NUMBER'
-    | 'SSN4'
-    | 'TAX_IDENTIFICATION_NUMBER';
+export enum IdentityDocumentType {
+    INDIVIDUAL_TAXPAYER_IDENTIFICATION_NUMBER = 'INDIVIDUAL_TAXPAYER_IDENTIFICATION_NUMBER',
+    NATIONAL_IDENTIFICATION_NUMBER = 'NATIONAL_IDENTIFICATION_NUMBER',
+    PASSPORT_NUMBER = 'PASSPORT_NUMBER',
+    SOCIAL_SECURITY_NUMBER = 'SOCIAL_SECURITY_NUMBER',
+    SSN4 = 'SSN4',
+    TAX_IDENTIFICATION_NUMBER = 'TAX_IDENTIFICATION_NUMBER',
+}
 
 // https://developer.paypal.com/docs/api/orders/v2/#definition-issuer
-export type Issuer = 'CARD_ISSUER_INSTALLMENTS' | 'PAYPAL';
+export enum Issuer {
+    CARD_ISSUER_INSTALLMENTS = 'CARD_ISSUER_INSTALLMENTS',
+    PAYPAL = 'PAYPAL',
+}
 
 // https://developer.paypal.com/docs/api/orders/v2/#definition-model-account
 export interface ModelAccount {
@@ -231,7 +267,11 @@ export interface ModelAccount {
     time_created: string;
 }
 
-export type Tier = 'BUSINESS' | 'PERSONAL' | 'PREMIER';
+export enum Tier {
+    BUSINESS = 'BUSINESS',
+    PERSONAL = 'PERSONAL',
+    PREMIER = 'PREMIER',
+}
 
 // https://developer.paypal.com/docs/api/orders/v2/#definition-model-address_with_confirmation
 export interface ModelAddressWithConfirmation {
@@ -295,22 +335,44 @@ export interface ModelCustomerServiceContact {
 }
 
 // https://developer.paypal.com/docs/api/orders/v2/#definition-model-enums-currency_receiving_type
-export type ModelEnumsCurrencyReceivingType = 'ACCEPT' | 'ACCEPT_OPEN' | 'DENY' | 'HOLD';
+export enum ModelEnumsCurrencyReceivingType {
+    ACCEPT = 'ACCEPT',
+    ACCEPT_OPEN = 'ACCEPT_OPEN',
+    DENY = 'DENY',
+    HOLD = 'HOLD',
+}
 
 // https://developer.paypal.com/docs/api/orders/v2/#definition-model-enums-disbursement_type
-export type ModelEnumsDisbursementType = 'INSTANT' | 'DELAYED';
+export enum ModelEnumsDisbursementType {
+    INSTANT = 'INSTANT',
+    DELAYED = 'DELAYED',
+}
 
 // https://developer.paypal.com/docs/api/orders/v2/#definition-model-enums-facilitator_type
-export type ModelEnumsFacilitatorType = 'API_CALLER' | 'INTERNAL' | 'PARTNER';
+export enum ModelEnumsFacilitatorType {
+    API_CALLER = 'API_CALLER',
+    INTERNAL = 'INTERNAL',
+    PARTNER = 'PARTNER',
+}
 
 // https://developer.paypal.com/docs/api/orders/v2/#definition-model-enums-liability_type
-export type ModelEnumsLiabilityType = 'FULL' | 'PARTIAL';
+export enum ModelEnumsLiabilityType {
+    FULL = 'FULL',
+    PARTIAL = 'PARTIAL',
+}
 
 // https://developer.paypal.com/docs/api/orders/v2/#definition-model-enums-participant_type
-export type ModelEnumsParticipantType = 'FACILITATOR' | 'RECEIVER' | 'SENDER';
+export enum ModelEnumsParticipantType {
+    FACILITATOR = 'FACILITATOR',
+    RECEIVER = 'RECEIVER',
+    SENDER = 'SENDER',
+}
 
 // https://developer.paypal.com/docs/api/orders/v2/#definition-model-enums-pricing_type
-export type ModelEnumsPricingType = 'BLENDED' | 'IC_PLUS';
+export enum ModelEnumsPricingType {
+    BLENDED = 'BLENDED',
+    IC_PLUS = 'IC_PLUS',
+}
 
 // https://developer.paypal.com/docs/api/orders/v2/#definition-model-business
 export interface ModelPerson extends ActivityTimestamps {
@@ -344,7 +406,14 @@ export interface ModelPhoneInfo {
     phone_type: PhoneType;
 }
 
-export type PhoneType = 'FAX' | 'HOME' | 'MOBILE' | 'OTHER' | 'PAGER' | 'WORK';
+export enum PhoneType {
+    FAX = 'FAX',
+    HOME = 'HOME',
+    MOBILE = 'MOBILE',
+    OTHER = 'OTHER',
+    PAGER = 'PAGER',
+    WORK = 'WORK',
+}
 
 // https://developer.paypal.com/docs/api/orders/v2/#definition-payer_base
 export interface PayerBase {
@@ -410,7 +479,11 @@ export interface Item {
     category: Category;
 }
 
-export type Category = 'DIGITAL_GOODS' | 'PHYSICAL_GOODS' | 'DONATION';
+export enum Category {
+    DIGITAL_GOODS = 'DIGITAL_GOODS',
+    PHYSICAL_GOODS = 'PHYSICAL_GOODS',
+    DONATION = 'DONATION',
+}
 
 // https://developer.paypal.com/docs/api/orders/v2/#definition-shipping_detail
 export interface ShippingDetail {
@@ -458,7 +531,11 @@ export interface OrderApplicationContext {
     stored_payment_source?: StoredPaymentSource;
 }
 
-export type LandingPage = 'LOGIN' | 'BILLING' | 'NO_PREFERENCE';
+export enum LandingPage {
+    LOGIN = 'LOGIN',
+    BILLING = 'BILLING',
+    NO_PREFERENCE = 'NO_PREFERENCE',
+}
 
 export type ShippingPreference = 'GET_FROM_FILE' | 'NO_SHIPPING' | 'SET_PROVIDED_ADDRESS';
 
@@ -471,9 +548,17 @@ export interface PaymentMethod {
     standard_entry_class_code: StandardEntryClassCode;
 }
 
-export type PayeePreferred = 'IMMEDIATE_PAYMENT_REQUIRED' | 'UNRESTRICTED';
+export enum PayeePreferred {
+    IMMEDIATE_PAYMENT_REQUIRED = 'IMMEDIATE_PAYMENT_REQUIRED',
+    UNRESTRICTED = 'UNRESTRICTED',
+}
 
-export type StandardEntryClassCode = 'CCD' | 'PPD' | 'TEL' | 'WEB';
+export enum StandardEntryClassCode {
+    CCD = 'CCD',
+    PP = 'PPD',
+    TEL = 'TEL',
+    WEB = 'WEB',
+}
 
 // https://developer.paypal.com/docs/api/orders/v2/#definition-stored_payment_source
 export interface StoredPaymentSource {
@@ -484,11 +569,22 @@ export interface StoredPaymentSource {
 }
 
 // https://developer.paypal.com/docs/api/orders/v2/#definition-payment_initiator
-export type PaymentInitiator = 'CUSTOMER' | 'MERCHANT';
+export enum PaymentInitiator {
+    CUSTOMER = 'CUSTOMER',
+    MERCHANT = 'MERCHANT',
+}
 
-export type PaymentType = 'ONE_TIME' | 'RECURRING' | 'UNSCHEDULED';
+export enum PaymentType {
+    ONE_TIME = 'ONE_TIME',
+    RECURRING = 'RECURRING',
+    UNSCHEDULED = 'UNSCHEDULED',
+}
 
-export type Usage = 'DERIVED' | 'FIRST' | 'SUBSEQUENT';
+export enum Usage {
+    DERIVED = 'DERIVED',
+    FIRST = 'FIRST',
+    SUBSEQUENT = 'SUBSEQUENT',
+}
 
 // https://developer.paypal.com/docs/api/orders/v2/#definition-patch
 export interface Patch {
@@ -498,7 +594,14 @@ export interface Patch {
     value: any;
 }
 
-export type Operation = 'add' | 'copy' | 'move' | 'remove' | 'replace' | 'test';
+export enum Operation {
+    ADD = 'add',
+    COPY = 'copy',
+    MOVE = 'move',
+    REMOVE = 'remove',
+    REPLACE = 'replace',
+    TEST = 'test',
+}
 
 export interface BaseOrderHeaders {
     Authorization: string;

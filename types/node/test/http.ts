@@ -628,6 +628,4 @@ import * as dns from 'node:dns';
 {
     http.validateHeaderName('Location');
     http.validateHeaderValue('Location', '/');
-
-    http.setMaxIdleHTTPParsers(1337);
 }

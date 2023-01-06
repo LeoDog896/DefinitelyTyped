@@ -4,6 +4,7 @@
         "interface-name": false,
         "max-line-length": false,
         "no-consecutive-blank-lines": false,
+        "trim-file": false,
         "unified-signatures": false
     }
 }

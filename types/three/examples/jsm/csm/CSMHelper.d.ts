@@ -23,5 +23,4 @@ export class CSMHelper<TCSM extends CSM = CSM> extends Group {
     shadowLines: Box3Helper[];
     updateVisibility(): void;
     update(): void;
-    dispose(): void;
 }

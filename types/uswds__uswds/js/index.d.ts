@@ -6,10 +6,7 @@ import datePicker from './usa-date-picker';
 import dateRangePicker from './usa-date-range-picker';
 import fileInput from './usa-file-input';
 import footer from './usa-footer';
-import inPageNavigation from './usa-in-page-navigation';
-import inputMask from './usa-input-mask';
 import inputPrefixSuffix from './usa-input-prefix-suffix';
-import languageSelector from './usa-language-selector';
 import modal from './usa-modal';
 import navigation from './usa-header';
 import password from './_usa-password';
@@ -29,10 +26,7 @@ export {
     dateRangePicker,
     fileInput,
     footer,
-    inPageNavigation,
-    inputMask,
     inputPrefixSuffix,
-    languageSelector,
     modal,
     navigation,
     password,

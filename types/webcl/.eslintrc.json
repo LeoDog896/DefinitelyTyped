@@ -1,6 +1,5 @@
 {
-    "rules": {
-        "no-const-enum": "off",
-        "trim-file": "off"
-    }
+  "rules": {
+      "no-const-enum": "off"
+  }
 }

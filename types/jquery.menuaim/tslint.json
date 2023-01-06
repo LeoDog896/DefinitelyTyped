@@ -6,6 +6,7 @@
         "npm-naming": false,
         "object-literal-shorthand": false,
         "only-arrow-functions": false,
-        "space-before-function-paren": false
+        "space-before-function-paren": false,
+        "trim-file": false
     }
 }

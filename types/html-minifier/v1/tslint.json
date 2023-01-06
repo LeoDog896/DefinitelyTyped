@@ -4,6 +4,7 @@
         "array-type": false,
         "no-reference-import": false,
         "no-var-keyword": false,
-        "prefer-const": false
+        "prefer-const": false,
+        "trim-file": false
     }
 }

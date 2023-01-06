@@ -26,8 +26,8 @@ const routeOptionsAccess: RouteOptionsAccess = {
     entity: 'user',
     mode: 'optional',
     payload: 'optional',
-    strategies: ['abc', 'def'],
-    strategy: 'abc'
+    strategies: ['', ''],
+    strategy: ''
 };
 
 const corsOption: RouteOptionsCors = {

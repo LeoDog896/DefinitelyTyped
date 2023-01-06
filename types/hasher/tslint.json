@@ -5,6 +5,7 @@
         "no-consecutive-blank-lines": false,
         "no-padding": false,
         "no-reference-import": false,
-        "strict-export-declare-modifiers": false
+        "strict-export-declare-modifiers": false,
+        "trim-file": false
     }
 }

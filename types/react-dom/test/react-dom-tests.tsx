@@ -199,15 +199,14 @@ describe('React dom test utils', () => {
             it('accepts a callback that is void', () => {
                 ReactTestUtils.act(() => {});
             });
-            it('accepts a callback that returns null', () => {
+            it('rejects a callback that returns null', () => {
+                // @ts-expect-error
                 ReactTestUtils.act(() => null);
             });
-            it('accepts a callback that returns a value', () => {
-                ReactTestUtils.act(() => "value");
-            });
-            it('returns a type that is Promise-like', () => {
+            it('returns a type that is not Promise-like', () => {
                 // tslint:disable-next-line no-void-expression
                 const result = ReactTestUtils.act(() => {});
+                // @ts-expect-error
                 result.then(x => {});
             });
         });
@@ -215,11 +214,9 @@ describe('React dom test utils', () => {
             it('accepts a callback that is void', async () => {
                 await ReactTestUtils.act(async () => {});
             });
-            it('a callback that returns null', async () => {
+            it('rejects a callback that returns a value', async () => {
+                // @ts-expect-error
                 await ReactTestUtils.act(async () => null);
-            });
-            it('a callback that returns a value', async () => {
-                await ReactTestUtils.act(async () => "value");
             });
             it('returns a Promise-like', () => {
                 const result = ReactTestUtils.act(async () => {});

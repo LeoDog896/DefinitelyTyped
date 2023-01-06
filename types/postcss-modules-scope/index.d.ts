@@ -20,8 +20,6 @@ declare namespace scope {
             path: string,
             css: string
         ) => { key: string; value: string }) | undefined;
-
-        exportGlobals?: boolean | undefined;
     }
 }
 

@@ -4,6 +4,7 @@
         "no-consecutive-blank-lines": false,
         "no-declare-current-package": false,
         "no-single-declare-module": false,
-        "no-var-keyword": false
+        "no-var-keyword": false,
+        "trim-file": false
     }
 }

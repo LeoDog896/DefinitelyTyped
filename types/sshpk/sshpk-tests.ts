@@ -174,15 +174,13 @@ private_key.createVerify();
 private_key.createVerify('sha1');
 
 // $ExpectType Signer
-const signer = private_key.createSign('md5');
+const signer = private_key.createSign('dsa');
 // $ExpectType Signer
-private_key.createSign('sha1');
+private_key.createSign('ecdsa');
 // $ExpectType Signer
-private_key.createSign('sha256');
+private_key.createSign('ed25519');
 // $ExpectType Signer
-private_key.createSign('sha384');
-// $ExpectType Signer
-private_key.createSign('sha512');
+private_key.createSign('rsa');
 
 // $ExpectType Signer
 signer.update('');
@@ -359,26 +357,12 @@ cert.signWith(private_key);
 // $ExpectType Certificate
 sshpk.createSelfSignedCertificate(identity, private_key);
 // $ExpectType Certificate
-sshpk.createSelfSignedCertificate([identity], private_key, {
-    lifetime: 1,
-    validFrom: new Date(),
-    validUntil: new Date(),
-    serial: Buffer.alloc(0),
-    purposes: [''],
-    ca: false,
-});
+sshpk.createSelfSignedCertificate([identity], private_key, { lifetime: 1, validFrom: new Date(), validUntil: new Date(), serial: Buffer.alloc(0), purposes: [''], ca: false });
 
 // $ExpectType Certificate
 sshpk.createCertificate(identity, key, identity, private_key);
 // $ExpectType Certificate
-sshpk.createCertificate([identity], private_key, identity, private_key, {
-    lifetime: 1,
-    validFrom: new Date(),
-    validUntil: new Date(),
-    serial: Buffer.alloc(0),
-    purposes: [''],
-    ca: false,
-});
+sshpk.createCertificate([identity], private_key, identity, private_key, { lifetime: 1, validFrom: new Date(), validUntil: new Date(), serial: Buffer.alloc(0), purposes: [''], ca: false });
 
 // == dhe.js == //
 

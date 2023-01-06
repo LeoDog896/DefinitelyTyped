@@ -1,6 +1,7 @@
 {
     "extends": "@definitelytyped/dtslint/dt.json",
     "rules": {
-        "semicolon": false
+        "semicolon": false,
+        "trim-file": false
     }
 }

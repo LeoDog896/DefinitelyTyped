@@ -1,7 +1,6 @@
-// Type definitions for react-headroom 3.2
+// Type definitions for react-headroom 2.2
 // Project: https://kyleamathews.github.io/react-headroom/, https://github.com/kyleamathews/react-headroom
 // Definitions by: Zero Cho <https://github.com/zerocho>
-//                 Rafael Derolez <https://github.com/rafaelderolez>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.8
 
@@ -26,8 +25,6 @@ export interface ReactHeadroomProps {
     disableInlineStyles?: boolean | undefined;
     className?: string | undefined;
     children: ReactNode;
-    pin?: boolean | undefined;
-    tag?: string | undefined;
 }
 
 export default Headroom;

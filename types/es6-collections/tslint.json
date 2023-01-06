@@ -8,6 +8,7 @@
         "no-single-declare-module": false,
         "no-unnecessary-generics": false,
         "no-var-keyword": false,
+        "trim-file": false,
         "unified-signatures": false
     }
 }

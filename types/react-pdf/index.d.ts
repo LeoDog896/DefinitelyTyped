@@ -2,7 +2,6 @@
 // Project: https://github.com/wojtekmaj/react-pdf/
 // Definitions by: CodeDaraW <https://github.com/CodeDaraW>
 //                 Nathan Hardy <https://github.com/nhardy>
-//                 Pirasis Leelatanon <https://github.com/1pete>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 3.0
 

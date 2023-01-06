@@ -2923,9 +2923,9 @@ declare namespace H {
 
         namespace SpatialStyle {
             /**
-             * The style of the end caps for a line, one of 'butt', 'round', 'square', 'arrow-head' or 'arrow-tail'.
+             * The style of the end caps for a line, one of 'butt', 'round' or 'square'.
              */
-            type LineCap = 'butt' | 'round' | 'square' | 'arrow-head' | 'arrow-tail';
+            type LineCap = 'butt' | 'round' | 'square';
 
             /**
              * The type of corner created, when two lines meet, one of 'round', 'bevel' or 'miter'.

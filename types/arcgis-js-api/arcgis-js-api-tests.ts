@@ -15,7 +15,7 @@ class MapController {
     });
 
     this.map = new Map({
-      basemap: { title: "topo-vector" }
+      basemap: { title: "topo" }
     });
 
     let view = new MapView({

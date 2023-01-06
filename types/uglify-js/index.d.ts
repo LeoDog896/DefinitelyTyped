@@ -30,7 +30,7 @@ export interface CompressOptions {
     arguments?: boolean | undefined;
     /**
      * Apply optimizations to assignment expressions
-     * @default true
+     * @default ture
      */
     assignments?: boolean | undefined;
     /**

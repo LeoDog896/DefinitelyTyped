@@ -158,7 +158,6 @@ export * from './math/Vector2';
 export * from './math/Quaternion';
 export * from './math/Color';
 export * from './math/SphericalHarmonics3';
-export { ColorManagement } from './math/ColorManagement';
 import * as MathUtils from './math/MathUtils';
 export { MathUtils };
 /**
@@ -224,7 +223,6 @@ export * from './scenes/Scene';
  * Textures
  */
 export * from './textures/VideoTexture';
-export * from './textures/CompressedArrayTexture';
 export * from './textures/DataTexture';
 export * from './textures/DataTexture2DArray';
 export * from './textures/DataTexture3D';

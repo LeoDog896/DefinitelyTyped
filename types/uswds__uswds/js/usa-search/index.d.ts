@@ -1,8 +1,8 @@
 interface Search {
-    init(target: HTMLElement | Document): void;
-    teardown(): void;
+    init(root: HTMLElement | Document): void;
     on(el: HTMLElement): void;
     off(el: HTMLElement): void;
+    teardown(): void;
 }
 
 declare const search: Search;

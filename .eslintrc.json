@@ -12,7 +12,6 @@
       "no-bad-reference": "error",
       "no-dead-reference": "error",
       "no-const-enum": "error",
-      "no-useless-files": "error",
-      "trim-file": "error"
+      "no-useless-files": "error"
     }
 }

@@ -7,6 +7,7 @@
         "no-padding": false,
         "no-redundant-jsdoc-2": false,
         "no-single-declare-module": false,
-        "no-var-keyword": false
+        "no-var-keyword": false,
+        "trim-file": false
     }
 }

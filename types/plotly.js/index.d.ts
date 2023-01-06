@@ -484,22 +484,13 @@ export interface Layout {
 }
 
 export interface Legend extends Label {
-    borderwidth: number;
-    groupclick: 'toggleitem' | 'togglegroup';
-    grouptitlefont: Partial<Font>;
-    itemclick: 'toggle' | 'toggleothers' | false;
-    itemdoubleclick: 'toggle' | 'toggleothers' | false;
-    itemsizing: 'trace' | 'constant';
-    itemwidth: number;
-    orientation: 'v' | 'h';
-    title: Partial<LegendTitle>;
-    tracegroupgap: number;
-    traceorder: 'grouped' | 'normal' | 'reversed' | 'reversed+grouped';
-    uirevision: number | string;
-    valign: 'top' | 'middle' | 'bottom';
+    traceorder: 'grouped' | 'normal' | 'reversed';
     x: number;
-    xanchor: 'auto' | 'left' | 'center' | 'right';
     y: number;
+    borderwidth: number;
+    orientation: 'v' | 'h';
+    tracegroupgap: number;
+    xanchor: 'auto' | 'left' | 'center' | 'right';
     yanchor: 'auto' | 'top' | 'middle' | 'bottom';
 }
 
@@ -875,8 +866,6 @@ export interface ModeBar {
     uirevision: number | string;
 }
 
-export type ModeBarButtonAny = ModeBarDefaultButtons | ModeBarButton;
-
 export type ModeBarDefaultButtons =
     | 'lasso2d'
     | 'select2d'
@@ -905,12 +894,7 @@ export type ModeBarDefaultButtons =
     | 'toggleHover'
     | 'toImage'
     | 'resetViews'
-    | 'toggleSpikelines'
-    | 'togglespikelines'
-    | 'togglehover'
-    | 'hovercompare'
-    | 'hoverclosest'
-    | 'v1hovermode';
+    | 'toggleSpikelines';
 
 export type ButtonClickEvent = (gd: PlotlyHTMLElement, ev: MouseEvent) => void;
 
@@ -1619,7 +1603,7 @@ export interface Config {
     modeBarButtonsToRemove: ModeBarDefaultButtons[];
 
     /** add mode bar button using config objects (see ./components/modebar/buttons.js for list of arguments) */
-    modeBarButtonsToAdd: ModeBarButtonAny[];
+    modeBarButtonsToAdd: ModeBarDefaultButtons[] | ModeBarButton[];
 
     /**
      * fully custom mode bar buttons as nested array, where the outer
@@ -1627,7 +1611,7 @@ export interface Config {
      * buttons config objects or names of default buttons
      * (see ./components/modebar/buttons.js for more info)
      */
-    modeBarButtons: ModeBarButtonAny[][] | false;
+    modeBarButtons: Array<Array<ModeBarDefaultButtons | ModeBarButton>> | false;
 
     /** add the plotly logo on the end of the mode bar */
     displaylogo: boolean;
@@ -1737,12 +1721,6 @@ export interface Label {
 
     /** Sets the default hover label font used by all traces on the graph. */
     font: Partial<Font>;
-}
-
-export interface LegendTitle {
-    font: Partial<Font>;
-    side: 'top' | 'left' | 'top left';
-    text: string;
 }
 
 export interface HoverLabel extends Label {

@@ -697,8 +697,6 @@ declare namespace OSS {
 
         signatureUrl(name: string, options?: SignatureUrlOptions): string;
 
-        asyncSignatureUrl(name: string, options?: SignatureUrlOptions): Promise<string>;
-
         putACL(name: string, acl: ACLType, options?: RequestOptions): Promise<NormalSuccessResponse>;
 
         restore(name: string, options?: RequestOptions): Promise<NormalSuccessResponse>;
@@ -791,11 +789,6 @@ declare namespace OSS {
          * Create a signature url for directly download.
          */
         signatureUrl(name: string, options?: { expires?: string | undefined; timeout?: string | undefined }): string;
-
-        /**
-         * Basically the same as signatureUrl, if refreshSTSToken is configured asyncSignatureUrl will refresh stsToken
-         */
-        asyncSignatureUrl(name: string, options?: SignatureUrlOptions): Promise<string>;
     }
 }
 
@@ -1059,11 +1052,6 @@ declare class OSS {
      * Create a signature url for download or upload object. When you put object with signatureUrl ,you need to pass Content-Type.Please look at the example.
      */
     signatureUrl(name: string, options?: OSS.SignatureUrlOptions): string;
-
-    /**
-     * Basically the same as signatureUrl, if refreshSTSToken is configured asyncSignatureUrl will refresh stsToken
-     */
-    asyncSignatureUrl(name: string, options?: OSS.SignatureUrlOptions): Promise<string>;
 
     /**
      * Set object's ACL.

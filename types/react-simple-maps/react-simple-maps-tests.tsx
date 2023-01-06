@@ -17,10 +17,10 @@ const Map = () => (
                 zoom; // $ExpectType number
                 event; // $ExpectType D3ZoomEvent<SVGElement, any>
             }}
-            onMove={({ x, y, zoom, dragging }, event) => {
+            onMove={({ x, y, k, dragging }, event) => {
                 x; // $ExpectType number
                 y; // $ExpectType number
-                zoom; // $ExpectType number
+                k; // $ExpectType number
                 dragging; // $ExpectType WheelEvent
                 event; // $ExpectType D3ZoomEvent<SVGElement, any>
             }}

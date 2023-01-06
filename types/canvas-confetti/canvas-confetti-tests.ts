@@ -44,7 +44,7 @@ confetti({
     origin: {
         y: 0.6
     },
-    shapes: ['square', 'circle', 'square', 'star']
+    shapes: ['square', 'circle', 'square']
 });
 
 const canvas = document.createElement('canvas');

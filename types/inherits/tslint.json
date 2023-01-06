@@ -2,6 +2,7 @@
     "extends": "@definitelytyped/dtslint/dt.json",
     "rules": {
         "no-consecutive-blank-lines": false,
-        "prefer-const": false
+        "prefer-const": false,
+        "trim-file": false
     }
 }

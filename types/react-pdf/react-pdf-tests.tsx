@@ -54,7 +54,6 @@ export class MyApp extends React.Component<{}, State> {
                     file="somefile.pdf"
                     onLoadSuccess={this.onDocumentLoadSuccess}
                     imageResourcesPath="/public"
-                    externalLinkRel="noopener noreferrer nofollow"
                 >
                     <Page
                         pageNumber={pageNumber}

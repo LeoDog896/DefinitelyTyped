@@ -1,5 +1,5 @@
 import { SemVer } from 'semver';
-import { SubProcess, TeenProcessExecOptions } from 'teen_process';
+import { SubProcess, ExecOptions } from 'teen_process';
 
 export { DEFAULT_ADB_EXEC_TIMEOUT } from '../helpers';
 
@@ -31,7 +31,7 @@ export interface VerboseDevice extends Device {
     transport_id?: string;
 }
 
-export interface AdbExecOptions extends TeenProcessExecOptions {
+export interface AdbExecOptions extends ExecOptions {
     exclusive?: boolean;
     outputFormat?: 'stdout' | 'full' | 'undefined';
 }
@@ -41,7 +41,7 @@ export interface ExecResult {
     stderr: string;
 }
 
-export interface ShellExecOptions extends TeenProcessExecOptions {
+export interface ShellExecOptions extends ExecOptions {
     /** @default [falsy] Whether to run the given command as root. */
     privileged?: boolean;
     /** @default [falsy] Whether to keep root mode after command execution is completed. */
@@ -390,7 +390,7 @@ interface SystemCalls {
      * @param timeoutMs [20000] - The maximum number of milliseconds to wait.
      * @throws If the emulator is not ready within the given timeout.
      */
-    waitForEmulatorReady(timeoutMs?: number): Promise<void>;
+    waitForEmulatorReady(timeoutMs?: string): Promise<void>;
 
     /**
      * Check if the current device is ready to accept further commands (booting completed).

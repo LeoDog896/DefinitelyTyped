@@ -53,7 +53,6 @@ export default class Sample extends React.Component<{}, State> {
                             value={value}
                             locale="ko-KR"
                             formatDay={(locale, date) => date.getDate().toString()}
-                            formatWeekday={(locale, date) => "customFormatWeekday"}
                             inputRef={this.ref}
                             selectRange
                         />

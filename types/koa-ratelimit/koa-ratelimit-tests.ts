@@ -1,10 +1,10 @@
-import Redis from "ioredis";
+import { RedisClient } from "redis";
 import Koa = require("koa");
 import rateLimit = require("koa-ratelimit");
 
 const app = new Koa();
 
-const redisClient = new Redis({
+const redisClient = new RedisClient({
     host: "localhost"
 });
 

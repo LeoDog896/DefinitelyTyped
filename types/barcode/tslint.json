@@ -5,6 +5,7 @@
         "no-var-keyword": false,
         "only-arrow-functions": false,
         "prefer-const": false,
-        "space-before-function-paren": false
+        "space-before-function-paren": false,
+        "trim-file": false
     }
 }

@@ -1,10 +1,4 @@
-import MapboxDraw, {
-    DrawCustomMode,
-    DrawFeature,
-    DrawMode,
-    DrawUpdateEvent,
-    MapboxDrawOptions,
-} from '@mapbox/mapbox-gl-draw';
+import MapboxDraw, { DrawCustomMode, DrawMode, DrawUpdateEvent, IMapboxDrawOptions } from '@mapbox/mapbox-gl-draw';
 
 const draw = new MapboxDraw({});
 
@@ -50,18 +44,6 @@ draw.changeMode('custom_mode');
 // $ExpectType MapboxDraw
 draw.changeMode('custom_mode', {});
 
-if (draw.getMode() === 'draw_line_string') {
-}
-
-if (draw.getMode() === 'some_custom_mode') {
-}
-
-// $ExpectType "direct_select"
-draw.modes.DIRECT_SELECT;
-
-// $ExpectType DrawCustomMode<any, any>
-MapboxDraw.modes.direct_select;
-
 function callback(event: DrawUpdateEvent) {
     // $ExpectType "draw.update"
     event.type;
@@ -78,25 +60,18 @@ const customMode: CustomMode = {
         // $ExpectType DrawFeature
         e.featureTarget;
 
-        // $ExpectType Map
-        this.map;
-
-        // $ExpectType boolean | undefined
-        this.drawConfig.displayControlsDefault;
-
-        this.setSelectedCoordinates([
-            {
-                coord_path: '0',
-                feature_id: '1',
-            },
-        ]);
+        this.setSelectedCoordinates([{
+            coord_path: '0',
+            feature_id: '1',
+        }]);
 
         this.setSelected();
         this.setSelected('1');
         this.setSelected(['1', '2']);
 
         // $ExpectType DrawFeature
-        this.getFeature('1');
+        const feat = this.getFeature('1');
+        feat.setCoordinates(feat.coordinates);
 
         // $ExpectType number
         this.customMethod();
@@ -112,7 +87,7 @@ const customMode: CustomMode = {
 // @ts-expect-error
 const CustomModeMissingDisplayFeatures: DrawCustomMode<{}, {}> = {};
 
-const options: MapboxDrawOptions = {
+const options: IMapboxDrawOptions = {
     modes: {
         custom_mode: customMode,
         ...MapboxDraw.modes,
@@ -120,72 +95,3 @@ const options: MapboxDrawOptions = {
 };
 
 const drawWithCustomMode = new MapboxDraw(options);
-
-// @ts-expect-error
-const feature: DrawFeature = {};
-
-// $ExpectType void
-feature.changed();
-
-// $ExpectType boolean
-feature.isValid();
-
-// $ExpectType Position
-feature.getCoordinate('');
-
-// $ExpectType void
-feature.updateCoordinate('', 0, 0);
-
-// $ExpectType void
-feature.setProperty('', 0);
-
-// $ExpectType GeoJSON
-feature.toGeoJSON();
-
-if (feature.type === 'Point') {
-    // $ExpectType Position
-    feature.coordinates;
-
-    // $ExpectType Position
-    feature.getCoordinate();
-
-    // $ExpectType void
-    feature.updateCoordinate(0, 0);
-}
-
-if (feature.type === 'LineString') {
-    // $ExpectType Position[]
-    feature.coordinates;
-
-    // $ExpectType void
-    feature.addCoordinate('', 0, 0);
-
-    // $ExpectType void
-    feature.removeCoordinate('');
-}
-
-if (feature.type === 'Polygon') {
-    // $ExpectType Position[][]
-    feature.coordinates;
-
-    // $ExpectType void
-    feature.addCoordinate('', 0, 0);
-
-    // $ExpectType void
-    feature.removeCoordinate('');
-}
-
-if (feature.type === 'MultiPoint') {
-    // $ExpectType DrawPoint[]
-    feature.features;
-}
-
-if (feature.type === 'MultiLineString') {
-    // $ExpectType DrawLineString[]
-    feature.features;
-}
-
-if (feature.type === 'MultiPolygon') {
-    // $ExpectType DrawPolygon[]
-    feature.features;
-}

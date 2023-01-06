@@ -7,14 +7,14 @@
 
 import { ClientApi, ClientOptions } from '@hapi/catbox';
 
-interface Engine<T> extends ClientApi<T> {}
+interface CatboxMemory<T> extends ClientApi<T> {}
 
 // tslint:disable-next-line:no-unnecessary-class
-declare class Engine<T> implements ClientApi<T> {
-    constructor(options?: Engine.Options);
+declare class CatboxMemory<T> implements ClientApi<T> {
+    constructor(options?: CatboxMemory.Options);
 }
 
-declare namespace Engine {
+declare namespace CatboxMemory {
     interface Options extends ClientOptions {
         /**
          * Sets an upper limit on the number of bytes that can be stored in the cache.
@@ -29,6 +29,13 @@ declare namespace Engine {
          */
         minCleanupIntervalMsec?: number | undefined;
         /**
+         * by default, all data is cached as JSON strings, and converted to an object using JSON.parse() on retrieval.
+         * By setting this option to true, Buffer data can be stored alongside the stringified data.
+         * Buffers are not stringified, and are copied before storage to prevent the value from changing while in the cache.
+         * @default false
+         */
+        allowMixedContent?: boolean | undefined;
+        /**
          * by default, buffers stored in the cache with allowMixedContent set to true are copied when they are set but not when they are retrieved.
          * This means a change to the buffer returned by a get() will change the value in the cache. To prevent this,
          * set cloneBuffersOnGet to true to always return a copy of the cached buffer.
@@ -38,4 +45,4 @@ declare namespace Engine {
     }
 }
 
-export { Engine };
+export = CatboxMemory;

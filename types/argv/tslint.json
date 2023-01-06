@@ -4,6 +4,7 @@
         "interface-over-type-literal": false,
         "no-consecutive-blank-lines": false,
         "no-padding": false,
-        "space-within-parens": false
+        "space-within-parens": false,
+        "trim-file": false
     }
 }

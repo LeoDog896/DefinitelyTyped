@@ -1,8 +1,8 @@
-import { ExtendDescribeThis } from 'nightwatch';
+import { ExtendDescribeThis, NightwatchAPI } from "nightwatch";
 
-import { isNightwatchAPI, isNull } from './utils';
-
+function isNull(v: null) {}
 function isString(v: string) {}
+function isNightwatchAPI(v: NightwatchAPI) {}
 function isMetrics(v: {[metricName: string]: number}) {}
 
 //

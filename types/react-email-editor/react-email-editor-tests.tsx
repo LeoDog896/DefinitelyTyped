@@ -1,36 +1,24 @@
 import * as React from 'react';
 import EmailEditor, {
-  ConditionalMergeTag,
-  Design,
-  DisplayCondition,
-  DisplayConditionDoneCallback,
-  EmptyDisplayCondition,
-  FileInfo,
-  FileUploadDoneCallback,
-  GroupedMergeTag,
-  GroupedSpecialLink,
-  HtmlExport,
-  SimpleMergeTag,
-  SimpleSpecialLink
+    Design,
+    FileInfo,
+    FileUploadDoneCallback,
+    HtmlExport,
+    SimpleMergeTag,
+    GroupedMergeTag,
+    ConditionalMergeTag, DisplayCondition, EmptyDisplayCondition, DisplayConditionDoneCallback,
+    SimpleSpecialLink,
+    GroupedSpecialLink
 } from 'react-email-editor';
 
 const TOOLS_CONFIG = {
   image: {
     enabled: true,
     position: 1,
-    properties: {
-      altText: {
-        value: "Image"
-      }
-    }
+    data: {
+      alt: 'this is a test alt text',
+    },
   },
-  heading: {
-    properties: {
-      text: {
-        value: 'This is a different heading'
-      }
-    }
-  }
 };
 
 const simpleMergeTag: SimpleMergeTag = { value: '{{simple_merge_tag}}', name: 'Simple Merge Tag' };
@@ -42,7 +30,7 @@ const groupedMergeTag: GroupedMergeTag = {
       name: 'Tag 2',
       mergeTags: [{ name: 'Tag 4', value: '{tag_4}' }]
     },
-    { name: 'Tag 3', value: '{tag_3}', sample: 'sample value' },
+    { name: 'Tag 3', value: '{tag_3}', sample: 'sample value'},
   ],
 };
 const conditionalMergeTag: ConditionalMergeTag = {
@@ -81,17 +69,6 @@ class App extends React.Component {
 
   private readonly handleLoad = () => {
     if (this.editorRef.current) {
-      this.editorRef.current.loadBlank(
-        {
-          backgroundColor: '#fff',
-          contentWidth: '50%',
-          contentAlign: 'left',
-          fontFamily: {
-            label: 'Helvetica',
-            value: "'Helvetica Neue', Helvetica, Arial, sans-serif"
-          }
-        }
-      );
       this.editorRef.current.loadDesign({ body: { rows: [] } });
       this.editorRef.current.addEventListener('design:updated', () =>
         console.log('design has been updated'),
@@ -106,7 +83,7 @@ class App extends React.Component {
       );
       this.editorRef.current.registerCallback(
         'displayCondition',
-        (data: DisplayCondition | EmptyDisplayCondition, done: DisplayConditionDoneCallback) => done(null),
+         (data: DisplayCondition | EmptyDisplayCondition, done: DisplayConditionDoneCallback) => done(null),
       );
       this.editorRef.current.registerCallback(
         'displayCondition',
@@ -119,9 +96,9 @@ class App extends React.Component {
         }),
       );
       this.editorRef.current.setMergeTags([
-        simpleMergeTag,
-        groupedMergeTag,
-        conditionalMergeTag
+          simpleMergeTag,
+          groupedMergeTag,
+          conditionalMergeTag
       ]);
     }
   }
@@ -134,9 +111,6 @@ class App extends React.Component {
       this.editorRef.current.exportHtml(({ design, html }: HtmlExport) => {
         console.log('exported design', design);
         console.log('exported HTML: ', html);
-      }, {
-        cleanup: true,
-        minify: true
       });
     }
   }
@@ -217,8 +191,6 @@ class App extends React.Component {
             },
           }}
           projectId={1}
-          editorId="editor"
-          scriptUrl="https://example.com/embed.js"
           onReady={this.handleLoad}
         />
         <button onClick={this.handleClick}>save all</button>

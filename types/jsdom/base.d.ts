@@ -1,5 +1,4 @@
 /// <reference lib="dom" />
-/// <reference lib="dom.iterable" />
 /// <reference types="node" />
 
 import { EventEmitter } from "events";

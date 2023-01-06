@@ -32,7 +32,6 @@ class ImageGallery extends React.Component {
             original: 'http://localhost/logo.jpg',
             originalTitle: 'My Logo',
             bulletClass: 'my-bullet-class-name',
-            loading: 'lazy',
         };
 
         const props: ReactImageGalleryProps = {

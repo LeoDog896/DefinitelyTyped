@@ -3,6 +3,7 @@
     "rules": {
         "no-consecutive-blank-lines": false,
         "strict-export-declare-modifiers": false,
+        "trim-file": false,
         "typedef-whitespace": false,
         "whitespace": false
     }

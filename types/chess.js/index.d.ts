@@ -315,10 +315,6 @@ export interface ChessInstance {
          * empty array is returned
          */
         square?: string | undefined;
-        /**
-         * Only return moves of given piece
-         */
-        piece?: PieceType;
     }): Move[];
 
     /**
@@ -343,10 +339,6 @@ export interface ChessInstance {
          * empty array is returned
          */
         square?: string | undefined;
-        /**
-         * Only return moves of given piece
-         */
-        piece?: PieceType;
     }): string[];
 
     /**
@@ -371,10 +363,6 @@ export interface ChessInstance {
          * empty array is returned
          */
         square?: string | undefined;
-        /**
-         * Only return moves of given piece
-         */
-        piece?: PieceType;
     }): string[] | Move[];
 
     /**

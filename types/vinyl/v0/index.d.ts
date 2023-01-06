@@ -1,6 +1,6 @@
 // Type definitions for vinyl 0.4.3
 // Project: https://github.com/wearefractal/vinyl
-// Definitions by: vvakame <https://github.com/vvakame>
+// Definitions by: vvakame <https://github.com/vvakame/>, jedmao <https://github.com/jedmao>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 /// <reference types="node" />

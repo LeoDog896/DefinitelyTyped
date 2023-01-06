@@ -12,6 +12,7 @@
                 "mode": "code"
             }
         ],
+        "trim-file": false,
         "whitespace": false
     }
 }

@@ -5,6 +5,7 @@
         "no-empty-interface": false,
         "no-padding": false,
         "no-var-keyword": false,
-        "prefer-const": false
+        "prefer-const": false,
+        "trim-file": false
     }
 }

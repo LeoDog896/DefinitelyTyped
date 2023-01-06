@@ -9,12 +9,10 @@ import { PassThrough } from 'stream';
 
 declare namespace run {
     interface OpenGraphImage {
-        // Height and Width can be optional, see doc on
-        // https://github.com/jshemas/openGraphScraper/blob/master/lib/media.js
-        height?: string;
+        height: string;
         type: string;
         url: string;
-        width?: string;
+        width: string;
     }
 
     interface OpenGraphProperties {

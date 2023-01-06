@@ -1,4 +1,4 @@
-// Type definitions for koa-cash 4.1
+// Type definitions for koa-cash 4.0
 // Project: https://github.com/koajs/cash
 // Definitions by: Jakob Goebel <https://github.com/jagoe>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
@@ -19,11 +19,6 @@ declare module 'koa' {
          * @param maxAge The max age passed to `get()`.
          */
         cashed(maxAge?: number): Promise<boolean>;
-       /**
-        * This is a special method that you can use to clear the cache for a specific key
-        * @param key The cache key you want to invalidate
-        */
-        cashClear(key: string): void;
     }
 }
 

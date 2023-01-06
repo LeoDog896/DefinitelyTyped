@@ -55,8 +55,8 @@ const connectCallback = (err: snowflake.SnowflakeError | undefined, conn: snowfl
             col1.isVariant(); // $ExpectType boolean
             col1.isObject(); // $ExpectType boolean
             col1.isArray(); // $ExpectType boolean
-            const option: snowflake.StreamOptions = {start: 0, end: 100, fetchAsString: ['Boolean', 'JSON', 'Buffer']};
-            const stream = stmt.streamRows(option);
+
+            const stream = stmt.streamRows();
             stream.on('data', data => {
                 //
             });
@@ -80,9 +80,8 @@ const connectCallback = (err: snowflake.SnowflakeError | undefined, conn: snowfl
     const statement = conn.execute({
         sqlText: ''
     });
-    const option: snowflake.StreamOptions = {start: 0, end: 100, fetchAsString: ['Number' , 'Date' , 'JSON', 'Buffer']};
     // $ExpectType Readable
-    const stream = statement.streamRows(option);
+    const stream = statement.streamRows();
     stream.on('data', data => {
         //
     });

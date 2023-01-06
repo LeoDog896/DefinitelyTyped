@@ -5,6 +5,7 @@
         "no-duplicate-variable": false,
         "no-var-keyword": false,
         "strict-export-declare-modifiers": false,
+        "trim-file": false,
         "unified-signatures": false
     }
 }

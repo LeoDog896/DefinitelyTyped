@@ -9,6 +9,7 @@
         "npm-naming": false,
         "prefer-const": false,
         "semicolon": false,
+        "trim-file": false,
         "whitespace": false
     }
 }

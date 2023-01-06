@@ -11,6 +11,7 @@
         "no-var-keyword": false,
         "one-variable-per-declaration": false,
         "prefer-const": false,
+        "trim-file": false,
         "unified-signatures": false
     }
 }

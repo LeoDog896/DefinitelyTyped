@@ -11,6 +11,7 @@
         "one-line": false,
         "only-arrow-functions": false,
         "prefer-const": false,
-        "semicolon": false
+        "semicolon": false,
+        "trim-file": false
     }
 }

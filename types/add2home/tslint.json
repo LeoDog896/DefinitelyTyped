@@ -4,6 +4,7 @@
         "jsdoc-format": false,
         "no-consecutive-blank-lines": false,
         "no-redundant-jsdoc-2": false,
-        "npm-naming": false
+        "npm-naming": false,
+        "trim-file": false
     }
 }

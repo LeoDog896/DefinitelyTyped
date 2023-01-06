@@ -9,6 +9,7 @@
         "no-trailing-whitespace": false,
         "npm-naming": false,
         "semicolon": false,
+        "trim-file": false,
         "unified-signatures": false
     }
 }

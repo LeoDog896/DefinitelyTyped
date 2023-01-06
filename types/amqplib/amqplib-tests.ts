@@ -7,10 +7,7 @@ const msg = 'Hello World';
 amqp.connect('amqp://localhost')
     .then(connection => {
         return connection.createChannel()
-            .then(channel => {
-                channel.checkQueue('myQueue');
-                return channel;
-            })
+            .tap(channel => channel.checkQueue('myQueue'))
             .then(channel => channel.sendToQueue('myQueue', new Buffer(msg)))
             .finally(() => connection.close());
     });
@@ -26,10 +23,7 @@ amqp.connect('amqp://localhost')
         connection.connection.serverProperties.customField; // $ExpectType string | undefined
 
         return connection.createChannel()
-            .then(channel => {
-                channel.checkQueue('myQueue');
-                return channel;
-            })
+            .tap(channel => channel.checkQueue('myQueue'))
             .then(channel => {
                 return channel.consume('myQueue', newMsg => {
                     if (newMsg != null) {

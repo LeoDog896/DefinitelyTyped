@@ -27,5 +27,5 @@ export interface MercadoPagoCard {
 
   all(customerId: string, configuration?: DefaultConfigurationOmitQs, callback?: CallbackFunction): Promise<CardGetResponse>;
 
-  delete(customerId: string, id: number | string, configuration?: DefaultConfigurationOmitQs, callback?: CallbackFunction): Promise<CardDeleteResponse>;
+  delete(id: number | string, configuration?: DefaultConfigurationOmitQs, callback?: CallbackFunction): Promise<CardDeleteResponse>;
 }

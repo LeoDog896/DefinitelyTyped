@@ -6,6 +6,7 @@
         "no-declare-current-package": false,
         "no-single-declare-module": false,
         "no-var-keyword": false,
+        "trim-file": false,
         "typedef-whitespace": false,
         "whitespace": false
     }

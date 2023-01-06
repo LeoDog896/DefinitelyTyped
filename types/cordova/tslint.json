@@ -11,6 +11,7 @@
         "no-var-keyword": false,
         "prefer-template": false,
         "semicolon": false,
+        "trim-file": false,
         "typedef-whitespace": false,
         "unified-signatures": false,
         "whitespace": false

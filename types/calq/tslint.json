@@ -5,6 +5,7 @@
         "object-literal-key-quotes": false,
         "one-line": false,
         "space-within-parens": false,
+        "trim-file": false,
         "typedef-whitespace": false,
         "whitespace": false
     }

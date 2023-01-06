@@ -26,6 +26,7 @@
         "semicolon": false,
         "space-before-function-paren": false,
         "space-within-parens": false,
+        "trim-file": false,
         "triple-equals": false,
         "typedef-whitespace": false,
         "unified-signatures": false,

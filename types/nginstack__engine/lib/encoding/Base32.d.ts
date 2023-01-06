@@ -2,50 +2,18 @@ export = Base32;
 declare function Base32(): void;
 declare class Base32 {}
 declare namespace Base32 {
-    export {
-        encode,
-        decode,
-        encodeStream,
-        decodeStream,
-        BASE32,
-        BASE32_NOPAD,
-        BASE32HEX,
-        BASE32HEX_NOPAD,
-        BASE32_DNSSEC,
-        BASE32_DNSCURVE,
-        File,
-        MemoryStream,
-        Base32Variant,
-    };
+    function encode(bin: string | ArrayBuffer | Uint8Array, variant?: string): string;
+    function decode(
+        str: string,
+        variant?: string,
+        resultType?: string
+    ): string | ArrayBuffer | Uint8Array;
+    function encodeStream(input: any, output: any, variant?: string): void;
+    function decodeStream(input: any, output: any, variant?: string): void;
+    const BASE32: string;
+    const BASE32_NOPAD: string;
+    const BASE32HEX: string;
+    const BASE32HEX_NOPAD: string;
+    const BASE32_DNSSEC: string;
+    const BASE32_DNSCURVE: string;
 }
-declare function encode(bin: string | ArrayBuffer | Uint8Array, variant?: Base32Variant): string;
-declare function decode(
-    str: string,
-    variant?: Base32Variant,
-    resultType?: string
-): string | Uint8Array | ArrayBuffer;
-declare function encodeStream(
-    input: File | MemoryStream,
-    output: File | MemoryStream,
-    variant?: Base32Variant
-): void;
-declare function decodeStream(
-    input: File | MemoryStream,
-    output: File | MemoryStream,
-    variant?: Base32Variant
-): void;
-declare var BASE32: string;
-declare var BASE32_NOPAD: string;
-declare var BASE32HEX: string;
-declare var BASE32HEX_NOPAD: string;
-declare var BASE32_DNSSEC: string;
-declare var BASE32_DNSCURVE: string;
-type File = import('../io/File');
-type MemoryStream = import('../io/MemoryStream');
-type Base32Variant =
-    | 'base32'
-    | 'base32_nopad'
-    | 'base32hex'
-    | 'base32hex_nopad'
-    | 'base32_dnssec'
-    | 'base32_dnscurve';

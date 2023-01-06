@@ -1,4 +1,4 @@
-// For Library Version: 1.108.0
+// For Library Version: 1.107.0
 
 declare module "sap/ui/table/library" {
   import TreeAutoExpandMode1 from "sap/ui/model/TreeAutoExpandMode";
@@ -432,7 +432,7 @@ declare module "sap/ui/table/AnalyticalColumnMenu" {
   import ElementMetadata from "sap/ui/core/ElementMetadata";
 
   /**
-   * @EXPERIMENTAL (since 1.21) - The AnalyticalColumnMenu will be productized soon.
+   * @EXPERIMENTAL (since 1.21)
    *
    * A column menu which is used by the analytical column
    */
@@ -5156,8 +5156,7 @@ declare module "sap/ui/table/Table" {
       oListener?: object
     ): this;
     /**
-     * @EXPERIMENTAL - Experimental! Presently implemented to only work with a very limited set of controls
-     * (e.g. sap.m.Text).
+     * @EXPERIMENTAL
      *
      * Triggers automatic resizing of a column to the widest content.
      */
@@ -5591,8 +5590,7 @@ declare module "sap/ui/table/Table" {
     ): this;
     /**
      * @deprecated (since 1.56) - replaced by the `sap.ui.export` library.
-     * @EXPERIMENTAL - Experimental because the property for the column/cell definitions (sortProperty) could
-     * change in future.
+     * @EXPERIMENTAL
      *
      * Creates a new {@link sap.ui.core.util.Export} object and fills row/column information from the table
      * if not provided. For the cell content, the column's "sortProperty" will be used (experimental!)
@@ -6230,7 +6228,7 @@ declare module "sap/ui/table/Table" {
      */
     getEnableCustomFilter(): boolean;
     /**
-     * @EXPERIMENTAL (since 1.28) - This feature has a limited functionality.
+     * @EXPERIMENTAL (since 1.28)
      *
      * Gets current value of property {@link #getEnableGrouping enableGrouping}.
      *
@@ -6338,7 +6336,7 @@ declare module "sap/ui/table/Table" {
      */
     getFooter(): Control | string;
     /**
-     * @EXPERIMENTAL (since 1.28) - This feature has a limited functionality.
+     * @EXPERIMENTAL (since 1.28)
      *
      * ID of the element which is the current target of the association {@link #getGroupBy groupBy}, or `null`.
      */
@@ -7064,7 +7062,7 @@ declare module "sap/ui/table/Table" {
       bEnableCustomFilter?: boolean
     ): this;
     /**
-     * @EXPERIMENTAL (since 1.28) - This feature has a limited functionality.
+     * @EXPERIMENTAL (since 1.28)
      *
      * Sets a new value for property {@link #getEnableGrouping enableGrouping}.
      *
@@ -7212,7 +7210,7 @@ declare module "sap/ui/table/Table" {
       vFooter: Control | string
     ): this;
     /**
-     * @EXPERIMENTAL (since 1.28) - This feature has a limited functionality.
+     * @EXPERIMENTAL (since 1.28)
      *
      * Sets the associated {@link #getGroupBy groupBy}.
      *
@@ -7730,7 +7728,7 @@ declare module "sap/ui/table/Table" {
     enableColumnReordering?: boolean | PropertyBindingInfo | `{${string}}`;
 
     /**
-     * @EXPERIMENTAL (since 1.28) - This feature has a limited functionality.
+     * @EXPERIMENTAL (since 1.28)
      *
      * Enables or disables grouping. If grouping is enabled, the table is grouped by the column which is defined
      * in the `groupBy` association.
@@ -7988,7 +7986,7 @@ declare module "sap/ui/table/Table" {
       | `{${string}}`;
 
     /**
-     * @EXPERIMENTAL (since 1.28) - This feature has a limited functionality.
+     * @EXPERIMENTAL (since 1.28)
      *
      * The column by which the table is grouped. Grouping will only be performed if `enableGrouping` is set
      * to `true`. Setting `groupBy` in the view does not work and throws an error. It can only be set if the
@@ -8269,7 +8267,7 @@ declare module "sap/ui/table/TablePersoController" {
      */
     getTable(): ID;
     /**
-     * @EXPERIMENTAL (since 1.21.2) - API might change / feature requires the sap.m library!
+     * @EXPERIMENTAL (since 1.21.2)
      *
      * Opens the personalization dialog for the Table to modify the visibility and the order of the columns.
      *
@@ -8685,8 +8683,7 @@ declare module "sap/ui/table/TreeTable" {
       }
     ): this;
     /**
-     * @deprecated (since 1.76) - replaced by the `collapseRecursive` binding parameter. May not work with all
-     * bindings.
+     * @deprecated (since 1.76) - replaced by the `collapseRecursive` binding parameter
      *
      * Gets current value of property {@link #getCollapseRecursive collapseRecursive}.
      *
@@ -8720,8 +8717,7 @@ declare module "sap/ui/table/TreeTable" {
      */
     getEnableGrouping(): boolean;
     /**
-     * @deprecated (since 1.46.3) - replaced by the `numberOfExpandedLevels` binding parameter. May not work
-     * with all bindings.
+     * @deprecated (since 1.46.3) - replaced by the `numberOfExpandedLevels` binding parameter
      *
      * Gets current value of property {@link #getExpandFirstLevel expandFirstLevel}.
      *
@@ -8763,7 +8759,7 @@ declare module "sap/ui/table/TreeTable" {
      */
     getGroupHeaderProperty(): string;
     /**
-     * @deprecated (since 1.76) - replaced by the `rootLevel` binding parameter. May not work with all bindings.
+     * @deprecated (since 1.76) - replaced by the `rootLevel` binding parameter
      *
      * Gets current value of property {@link #getRootLevel rootLevel}.
      *
@@ -8849,8 +8845,7 @@ declare module "sap/ui/table/TreeTable" {
      */
     selectAll(): this;
     /**
-     * @deprecated (since 1.76) - replaced by the `collapseRecursive` binding parameter. May not work with all
-     * bindings.
+     * @deprecated (since 1.76) - replaced by the `collapseRecursive` binding parameter
      *
      * Sets a new value for property {@link #getCollapseRecursive collapseRecursive}.
      *
@@ -8895,8 +8890,7 @@ declare module "sap/ui/table/TreeTable" {
      */
     setEnableGrouping(bValue: boolean): this;
     /**
-     * @deprecated (since 1.46.3) - replaced by the `numberOfExpandedLevels` binding parameter. May not work
-     * with all bindings.
+     * @deprecated (since 1.46.3) - replaced by the `numberOfExpandedLevels` binding parameter
      *
      * Sets a new value for property {@link #getExpandFirstLevel expandFirstLevel}.
      *
@@ -8969,7 +8963,7 @@ declare module "sap/ui/table/TreeTable" {
       sGroupHeaderProperty?: string
     ): this;
     /**
-     * @deprecated (since 1.76) - replaced by the `rootLevel` binding parameter. May not work with all bindings.
+     * @deprecated (since 1.76) - replaced by the `rootLevel` binding parameter
      *
      * Sets a new value for property {@link #getRootLevel rootLevel}.
      *
@@ -9073,8 +9067,7 @@ declare module "sap/ui/table/TreeTable" {
 
   export interface $TreeTableSettings extends $TableSettings {
     /**
-     * @deprecated (since 1.46.3) - replaced by the `numberOfExpandedLevels` binding parameter. May not work
-     * with all bindings.
+     * @deprecated (since 1.46.3) - replaced by the `numberOfExpandedLevels` binding parameter
      *
      * Specifies whether the first level is expanded.
      *
@@ -9107,8 +9100,7 @@ declare module "sap/ui/table/TreeTable" {
     groupHeaderProperty?: string | PropertyBindingInfo;
 
     /**
-     * @deprecated (since 1.76) - replaced by the `collapseRecursive` binding parameter. May not work with all
-     * bindings.
+     * @deprecated (since 1.76) - replaced by the `collapseRecursive` binding parameter
      *
      * Setting collapseRecursive to true means, that when collapsing a node all subsequent child nodes will
      * also be collapsed. This property is only supported with sap.ui.model.odata.v2.ODataModel. **Note:** collapseRecursive
@@ -9130,7 +9122,7 @@ declare module "sap/ui/table/TreeTable" {
     collapseRecursive?: boolean | PropertyBindingInfo | `{${string}}`;
 
     /**
-     * @deprecated (since 1.76) - replaced by the `rootLevel` binding parameter. May not work with all bindings.
+     * @deprecated (since 1.76) - replaced by the `rootLevel` binding parameter
      *
      * The root level is the level of the topmost tree nodes, which will be used as an entry point for OData
      * services. This property is only supported when the TreeTable uses an underlying odata services with hierarchy

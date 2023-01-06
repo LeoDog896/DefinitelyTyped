@@ -13,6 +13,7 @@
         "prefer-template": false,
         "semicolon": false,
         "strict-export-declare-modifiers": false,
+        "trim-file": false,
         "triple-equals": false,
         "typedef-whitespace": false,
         "whitespace": false

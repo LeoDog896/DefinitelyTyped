@@ -9,6 +9,7 @@
         "no-unnecessary-qualifier": false,
         "no-var-keyword": false,
         "prefer-const": false,
-        "space-before-function-paren": false
+        "space-before-function-paren": false,
+        "trim-file": false
     }
 }

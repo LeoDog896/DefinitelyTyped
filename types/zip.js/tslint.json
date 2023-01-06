@@ -9,6 +9,7 @@
         "npm-naming": false,
         "only-arrow-functions": false,
         "strict-export-declare-modifiers": false,
+        "trim-file": false,
         "typedef-whitespace": false
     }
 }

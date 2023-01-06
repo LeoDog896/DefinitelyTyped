@@ -18,6 +18,7 @@
         "prefer-const": false,
         "prefer-template": false,
         "semicolon": false,
+        "trim-file": false,
         "triple-equals": false,
         "typedef-whitespace": false,
         "unified-signatures": false,

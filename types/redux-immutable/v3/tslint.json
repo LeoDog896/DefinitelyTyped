@@ -5,6 +5,7 @@
         "no-empty-interface": false,
         "no-unnecessary-generics": false,
         "semicolon": false,
-        "strict-export-declare-modifiers": false
+        "strict-export-declare-modifiers": false,
+        "trim-file": false
     }
 }

@@ -18,6 +18,7 @@
         "prefer-const": false,
         "space-within-parens": false,
         "strict-export-declare-modifiers": false,
+        "trim-file": false,
         "typedef-whitespace": false,
         "whitespace": false
     }

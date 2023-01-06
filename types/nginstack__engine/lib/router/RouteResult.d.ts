@@ -17,15 +17,15 @@ declare class RouteResult {
     content: any;
     as(contentType: MediaType | null): RouteResult;
     contentType: MediaType;
-    withCharset(charset: string | null): RouteResult;
-    charset: string | null;
+    withCharset(charset: string): RouteResult;
+    charset: string;
     withHeader(name: string, value: string): RouteResult;
     withHeaders(headers: any): RouteResult;
     headers: any;
     send(
         response: Response,
-        options?: {
-            onlyHeaders?: boolean;
+        opt_options?: {
+            onlyHeader?: boolean;
             debug?: boolean;
         }
     ): void;

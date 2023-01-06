@@ -8,6 +8,7 @@
         "no-var-keyword": false,
         "object-literal-shorthand": false,
         "one-line": false,
-        "only-arrow-functions": false
+        "only-arrow-functions": false,
+        "trim-file": false
     }
 }

@@ -1,7 +1,6 @@
 {
   "private": true,
   "dependencies": {
-    "graphql": "0.13.1 - 16",
-    "fs-capacitor": "^8.0.0"
+    "graphql": "0.13.1 - 16"
   }
 }

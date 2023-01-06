@@ -14,7 +14,16 @@
         "../"
       ],
       "types": [
+
       ],
+      "paths": {
+        "puppeteer": [
+            "puppeteer/v3"
+        ],
+        "puppeteer/*": [
+            "puppeteer/v3/*"
+        ]
+      },
       "noEmit": true,
       "forceConsistentCasingInFileNames": true
     },

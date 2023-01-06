@@ -20,9 +20,9 @@ export class Reset {
     static reset(
         repo: Repository,
         target: Commit | Tag,
-        resetType: Reset.TYPE,
-        checkoutOpts?: CheckoutOptions,
-    ): Promise<void>;
+        resetType: number,
+        checkoutOpts: CheckoutOptions,
+    ): Promise<number>;
     /**
      * Look up a refs's commit.
      */

@@ -40,7 +40,6 @@ createDecoderModule().then((decoderModule: DecoderModule) => {
     const decoder = new decoderModule.Decoder();
     const buffer = new decoderModule.DecoderBuffer();
     buffer.Init(new Int8Array(100), 100);
-    const pointCloud = new decoderModule.PointCloud();
 
     try {
         const geometryType = decoder.GetEncodedGeometryType(buffer);
@@ -49,11 +48,10 @@ createDecoderModule().then((decoderModule: DecoderModule) => {
         }
 
         const mesh = new decoderModule.Mesh();
-        const numMeshPoints = pointCloud.num_points();
-        const meshStatus = decoder.DecodeBufferToMesh(buffer, mesh);
+        const status = decoder.DecodeBufferToMesh(buffer, mesh);
 
-        if (!meshStatus.ok() || mesh.ptr === 0) {
-            throw new Error('Decoding failure.' + meshStatus.error_msg());
+        if (!status.ok() || mesh.ptr === 0) {
+            throw new Error('Decoding failure.' + status.error_msg());
         }
 
         // Indices.
@@ -70,15 +68,6 @@ createDecoderModule().then((decoderModule: DecoderModule) => {
 
         const attributeId = decoder.GetAttributeId(mesh, decoderModule.POSITION);
         const attribute2 = decoder.GetAttribute(mesh, attributeId);
-
-        const pointCloudstatus = decoder.DecodeBufferToPointCloud(buffer, pointCloud);
-
-        if (!pointCloudstatus.ok()) {
-            throw new Error('Decoding failure.' + pointCloudstatus.error_msg());
-        }
-
-        const numAttributes = pointCloud.num_attributes();
-        const numPointCloudPoints = pointCloud.num_points();
 
         decoderModule._free(ptr);
     } finally {

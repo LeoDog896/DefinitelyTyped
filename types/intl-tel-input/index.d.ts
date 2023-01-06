@@ -128,8 +128,6 @@ declare namespace intlTelInput {
          * @param type Placeholder number type to be set
          */
         setPlaceholderNumberType(type: placeholderNumberType): void;
-
-        countryList: HTMLUListElement;
     }
 
     interface Options {

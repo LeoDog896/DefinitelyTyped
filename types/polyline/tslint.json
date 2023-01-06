@@ -4,6 +4,7 @@
         "no-consecutive-blank-lines": false,
         "no-declare-current-package": false,
         "no-single-declare-module": false,
-        "object-literal-key-quotes": false
+        "object-literal-key-quotes": false,
+        "trim-file": false
     }
 }

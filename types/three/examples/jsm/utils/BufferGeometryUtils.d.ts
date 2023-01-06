@@ -8,7 +8,6 @@ import {
     Points,
 } from '../../../src/Three';
 
-export function deepCloneAttribute(attribute: BufferAttribute): BufferAttribute;
 export function mergeBufferGeometries(geometries: BufferGeometry[], useGroups?: boolean): BufferGeometry;
 export function mergeBufferAttributes(attributes: BufferAttribute[]): BufferAttribute;
 export function interleaveAttributes(attributes: BufferAttribute[]): InterleavedBufferAttribute;

@@ -5,6 +5,7 @@
         "no-padding": false,
         "no-var-keyword": false,
         "space-before-function-paren": false,
+        "trim-file": false,
         "unified-signatures": false,
         "whitespace": false
     }

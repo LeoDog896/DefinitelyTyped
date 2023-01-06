@@ -1,6 +1,5 @@
 {
     "rules": {
-        "no-useless-files": "off",
-        "trim-file": "off"
+        "no-useless-files": "off"
     }
 }

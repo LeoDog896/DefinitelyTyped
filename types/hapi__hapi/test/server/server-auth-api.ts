@@ -10,7 +10,6 @@ declare module '@hapi/hapi' {
     interface ServerAuthSchemeObjectApi {
         settings: {
             x: number;
-            y: boolean
         };
     }
 }
@@ -19,8 +18,7 @@ const scheme: ServerAuthScheme = (server, options) => {
     return {
         api: {
             settings: {
-                x: 5,
-                y: true
+                x: 5
             }
         },
         authenticate(request, h) {

@@ -4,9 +4,7 @@ import * as $ from 'jquery';
 const element = new Element();
 
 // $ExpectType Toast
-const toast = new Toast(element, { animation: false });
-// $ExpectType boolean
-toast.isShown();
+new Toast(element, { animation: false });
 
 // $ExpectType Toast | null
 Toast.getInstance(element);

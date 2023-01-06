@@ -1,7 +1,8 @@
 // Type definitions for frappe-gantt 0.6
 // Project: https://github.com/frappe/gantt
-// Definitions by: Sam Alexander <https://github.com/samalexander>
-//                 Elijah Lucian <https://github.com/eli7vh>
+// Definitions by: Sam Alexander <https://github.com/samalexander>,
+//                 Elijah Lucian <https://github.com/eli7vh>,
+//                 R2C <https://github.com/zhengruncai>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 export = Gantt;

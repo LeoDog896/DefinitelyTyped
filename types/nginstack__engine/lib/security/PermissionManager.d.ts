@@ -28,11 +28,14 @@ declare class PermissionManager {
     remove(key: number): number;
     removeOrphans(): number;
     fixClasses(): void;
-    fixInheritance(options?: {
-        transaction?: Transaction;
-        resources?: number[];
-        ignoredKeys?: number[];
-    }): number | null;
+    fixInheritance(
+        opt_options?:
+            | Record<any, any>
+            | {
+                  resources: number[];
+                  transaction: Transaction;
+              }
+    ): number | null;
     copyPermissions(
         source: number,
         target: number,

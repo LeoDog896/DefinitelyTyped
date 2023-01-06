@@ -24,7 +24,6 @@ declare namespace GoogleAppsScript {
 
     interface AppsScriptHttpRequestEvent {
       parameter: { [key: string]: string };
-      pathInfo: string;
       contextPath: string;
       contentLength: number;
       queryString: string;

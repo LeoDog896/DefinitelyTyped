@@ -14,6 +14,7 @@
         "semicolon": false,
         "space-before-function-paren": false,
         "strict-export-declare-modifiers": false,
+        "trim-file": false,
         "unified-signatures": false
     }
 }

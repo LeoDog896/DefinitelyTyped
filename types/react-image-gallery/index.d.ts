@@ -1,4 +1,4 @@
-// Type definitions for react-image-gallery 1.2
+// Type definitions for react-image-gallery 1.0
 // Project: https://github.com/xiaolin/react-image-gallery
 // Definitions by: Adam Webb <https://github.com/adamwpc>
 //                 William Tio <https://github.com/WToa>
@@ -43,8 +43,6 @@ export interface ReactImageGalleryItem {
     imageSet?: ReactImageGalleryImageSet | undefined;
     srcSet?: string | undefined;
     sizes?: string | undefined;
-    loading?: 'lazy' | 'eager' | undefined;
-    thumbnailLoading?: 'lazy' | 'eager' | undefined;
 }
 
 export interface ReactImageGalleryProps {

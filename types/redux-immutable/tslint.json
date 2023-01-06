@@ -6,6 +6,7 @@
         "no-unnecessary-generics": false,
         "semicolon": false,
         "strict-export-declare-modifiers": false,
+        "trim-file": false,
         "whitespace": false
     }
 }

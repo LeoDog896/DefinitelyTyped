@@ -28,5 +28,3 @@ domWindow.FinalizationRegistry; // $ExpectType FinalizationRegistryConstructor
 domWindow.WeakRef; // $ExpectType WeakRefConstructor
 
 dom.nodeLocation(domWindow.document.createElement('br')); // $ExpectType Location | null | undefined
-
-const childNodesArray = [...(domWindow.document.getElementById('parent')?.childNodes || [])]; // $ExpectType ChildNode[]

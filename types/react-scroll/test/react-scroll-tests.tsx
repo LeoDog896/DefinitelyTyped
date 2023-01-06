@@ -109,7 +109,6 @@ const linkTest5 = (
             console.log(element);
         }}
         ignoreCancelEvents={false}
-        horizontal={true}
     >
         Your name
     </Link>

@@ -1,8 +1,7 @@
-// Type definitions for react-calendar 3.9
+// Type definitions for react-calendar 3.5
 // Project: https://github.com/wojtekmaj/react-calendar
 // Definitions by: Stéphane Saquet <https://github.com/Guymestef>
 //                 Katie Soldau <https://github.com/ksoldau>
-//                 Pirasis Leelatanon <https://github.com/1pete>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 3.5
 
@@ -35,7 +34,6 @@ export interface CalendarProps {
     formatMonth?: FormatterCallback | undefined;
     formatMonthYear?: FormatterCallback | undefined;
     formatShortWeekday?: FormatterCallback | undefined;
-    formatWeekday?: FormatterCallback | undefined;
     formatYear?: FormatterCallback | undefined;
     goToRangeStartOnSelect?: boolean | undefined;
     inputRef?:

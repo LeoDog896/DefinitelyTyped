@@ -18,6 +18,7 @@
         "prefer-template": false,
         "semicolon": false,
         "space-before-function-paren": false,
+        "trim-file": false,
         "typedef-whitespace": false,
         "whitespace": false
     }

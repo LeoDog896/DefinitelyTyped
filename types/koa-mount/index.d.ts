@@ -1,6 +1,7 @@
 // Type definitions for koa-mount 4.0
 // Project: https://github.com/koajs/mount
-// Definitions by: Tomek Łaziuk <https://github.com/tlaziuk>
+// Definitions by: AmirSaber Sharifi <https://github.com/amirsaber>
+//                 Tomek Łaziuk <https://github.com/tlaziuk>
 //                 Vladislav Polyakov <https://github.com/polrk>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.3

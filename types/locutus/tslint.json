@@ -4,6 +4,7 @@
         "max-line-length": false,
         "no-declare-current-package": false,
         "no-self-import": false,
+        "trim-file": false,
         "typedef-whitespace": false,
         "whitespace": false
     }

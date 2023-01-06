@@ -1,16 +1,28 @@
 {
     "compilerOptions": {
         "module": "commonjs",
-        "lib": ["es6"],
+        "lib": [
+            "es6"
+        ],
         "noImplicitAny": true,
         "noImplicitThis": true,
         "strictFunctionTypes": true,
         "strictNullChecks": true,
         "baseUrl": "../",
-        "typeRoots": ["../"],
+        "typeRoots": [
+            "../"
+        ],
         "types": [],
         "noEmit": true,
-        "forceConsistentCasingInFileNames": true
+        "forceConsistentCasingInFileNames": true,
+        "paths": {
+            "@pollyjs/*": [
+                "pollyjs__*"
+            ]
+        }
     },
-    "files": ["index.d.ts", "setup-polly-jest-tests.ts"]
+    "files": [
+        "index.d.ts",
+        "setup-polly-jest-tests.ts"
+    ]
 }

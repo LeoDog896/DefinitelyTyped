@@ -8,6 +8,7 @@
         "npm-naming": false,
         "object-literal-shorthand": false,
         "only-arrow-functions": false,
+        "trim-file": false,
         "unified-signatures": false
     }
 }

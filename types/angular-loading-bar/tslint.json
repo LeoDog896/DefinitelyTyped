@@ -8,6 +8,7 @@
         "no-unnecessary-class": false,
         "no-var-keyword": false,
         "semicolon": false,
-        "strict-export-declare-modifiers": false
+        "strict-export-declare-modifiers": false,
+        "trim-file": false
     }
 }

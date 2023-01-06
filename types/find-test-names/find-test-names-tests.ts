@@ -1,8 +1,6 @@
 import {
     countTags,
     filterByEffectiveTags,
-    findEffectiveTestTags,
-    findEffectiveTestTagsIn,
     formatTestList,
     getTestNames,
     setEffectiveTags,
@@ -30,17 +28,3 @@ formatTestList(structure, 4); // $ExpectType string
 
 // $ExpectType Test[]
 const filtered = filterByEffectiveTags(result.structure, ['@one']);
-
-const source = `
-    describe('parent', {tags: '@user'}, () => {
-      describe('child', {tags: '@auth'}, () => {
-        it('works a', {tags: '@one'}, () => {})
-        it('works b', () => {})
-      })
-    })
-    it('sits at the top', {tags: '@root'}, () => {})
-    it.skip('has no tags')
-  `;
-findEffectiveTestTags(source); // $ExpectType Record<string, Tags>
-
-findEffectiveTestTagsIn('specFilename'); // $ExpectType Record<string, Tags>

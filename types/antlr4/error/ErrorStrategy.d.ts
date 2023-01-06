@@ -1,16 +1,21 @@
-import Parser from '../Parser';
-import RecognitionException from './RecognitionException';
+import { Recognizer } from '../Recognizer';
 
-export default class ErrorStrategy {
-    reset(recognizer: Parser): void;
+export class ErrorStrategy {
+    reset(recognizer: Recognizer): void;
 
-    recoverInline(recognizer: Parser): void;
+    recoverInline(recognizer: Recognizer): void;
 
-    recover(recognizer: Parser, e: RecognitionException): void;
+    recover(recognizer: Recognizer, e: Error): void;
 
-    sync(recognizer: Parser): void;
+    sync(recognizer: Recognizer): void;
 
-    inErrorRecoveryMode(recognizer: Parser): void;
+    inErrorRecoveryMode(recognizer: Recognizer): void;
 
-    reportError(recognizer: Parser, e: RecognitionException): void;
+    reportError(recognizer: Recognizer): void;
+}
+
+export class DefaultErrorStrategy extends ErrorStrategy {
+}
+
+export class BailErrorStrategy extends ErrorStrategy {
 }

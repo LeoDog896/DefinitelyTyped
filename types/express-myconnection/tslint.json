@@ -11,6 +11,7 @@
         "one-line": false,
         "only-arrow-functions": false,
         "prefer-const": false,
-        "strict-export-declare-modifiers": false
+        "strict-export-declare-modifiers": false,
+        "trim-file": false
     }
 }

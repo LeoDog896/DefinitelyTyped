@@ -1,6 +1,6 @@
-import type { TextDocument, Range, Position } from 'vscode';
+import type { Uri, Range, Position } from 'vscode';
 
-const doc = null as unknown as TextDocument;
+const uri = null as unknown as Uri;
 const range = null as unknown as Range;
 const position = null as unknown as Position;
 
@@ -13,8 +13,8 @@ using(
             'index.js': '',
         },
     },
-    async mapFileToDoc => {
-        mapFileToDoc['index.js'];
+    async mapFileToUri => {
+        mapFileToUri['index.js'];
     },
 );
 
@@ -25,9 +25,9 @@ using(
             'index.js': '',
         },
     },
-    async mapFileToDoc => {
+    async mapFileToUri => {
         // @ts-expect-error
-        mapFileToDoc['unknown-file.js'];
+        mapFileToUri['unknown-file.js'];
     },
 );
 
@@ -39,7 +39,7 @@ using(
             'window.showQuickPick': async () => '',
         },
     },
-    async mapFileToDoc => {},
+    async mapFileToUri => {},
 );
 
 /* waitFor */
@@ -50,19 +50,19 @@ waitFor(() => 1);
 /* take */
 
 // $ExpectType Promise<{ [codeActionTitle: string]: () => Thenable<void>; }>
-take.codeActions(doc, range);
+take.codeActions(uri, range);
 
 // $ExpectType Promise<(Location | LocationLink)[]> || Promise<(LocationLink | Location)[]>
-take.definitions(doc, position);
+take.definitions(uri, position);
 
 // $ExpectType Promise<string>
-take.documentText(doc);
+take.documentText(uri);
 
 // $ExpectType Promise<SymbolInformation[]>
-take.documentSymbols(doc);
+take.documentSymbols(uri);
 
 // $ExpectType Promise<string[]>
-take.hovers(doc, position);
+take.hovers(uri, position);
 
 /* dedent */
 

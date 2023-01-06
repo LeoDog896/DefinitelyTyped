@@ -1,5 +1,3 @@
-import { isNightwatchAPI } from './utils';
-
 // Expect test for language chains
 
 it('actions.press', () => {
@@ -48,17 +46,7 @@ it('actions.dragAndDrop', () => {
     browser.perform(async () => {
         const sampleElement = element('.element-class');
         const webElement = await sampleElement.getWebElement();
-        browser.actions().dragAndDrop(webElement, {x: 12, y: 234});
-
-        const webElement2 = sampleElement.findElement();
-        isNightwatchAPI(webElement2);
-        // @ts-expect-error
-        browser.actions().dragAndDrop(webElement2, {x: 12, y: 234});
-        browser.actions().dragAndDrop(await webElement2, {x: 12, y: 234});
-
-        const webElement3 = await sampleElement.findElement('something');
-        // @ts-expect-error
-        return browser.actions().dragAndDrop(webElement3, {x: 12, y: 234});
+        return browser.actions().dragAndDrop(webElement, {x: 12, y: 234});
     });
 });
 

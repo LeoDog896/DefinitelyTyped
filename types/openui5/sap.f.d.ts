@@ -1,4 +1,4 @@
-// For Library Version: 1.108.0
+// For Library Version: 1.107.0
 
 declare module "sap/tnt/library" {
   export interface IToolHeader {
@@ -169,8 +169,7 @@ declare module "sap/f/library" {
 
   /**
    * @SINCE 1.63
-   * @EXPERIMENTAL (since 1.63) - that provides only limited functionality. Also, it can be removed in future
-   * versions.
+   * @EXPERIMENTAL (since 1.63)
    *
    * Interface for controls suitable for the `additionalContent` aggregation of `{@link sap.f.ShellBar}`.
    */
@@ -496,8 +495,7 @@ declare module "sap/f/AvatarGroup" {
 
   /**
    * @SINCE 1.73
-   * @EXPERIMENTAL (since 1.73) - This class is experimental and provides only limited functionality. Also
-   * the API might be changed in future.
+   * @EXPERIMENTAL (since 1.73)
    *
    * Displays a group of avatars arranged horizontally. It is useful to visually showcase a group of related
    * avatars, such as, project team members or employees.
@@ -947,8 +945,7 @@ declare module "sap/f/AvatarGroupItem" {
 
   /**
    * @SINCE 1.73
-   * @EXPERIMENTAL (since 1.73) - This class is experimental and provides only limited functionality. Also
-   * the API might be changed in future.
+   * @EXPERIMENTAL (since 1.73)
    *
    * Represents a single avatar item displayed in the {@link sap.f.AvatarGroup} control.
    *
@@ -1568,7 +1565,7 @@ declare module "sap/f/cards/BaseHeader" {
      */
     destroyToolbar(): this;
     /**
-     * @EXPERIMENTAL (since 1.89) - this feature is experimental and the API may change.
+     * @EXPERIMENTAL (since 1.89)
      *
      * Gets current value of property {@link #getDataTimestamp dataTimestamp}.
      *
@@ -1611,7 +1608,7 @@ declare module "sap/f/cards/BaseHeader" {
 
   export interface $BaseHeaderSettings extends $ControlSettings {
     /**
-     * @EXPERIMENTAL (since 1.89) - this feature is experimental and the API may change.
+     * @EXPERIMENTAL (since 1.89)
      *
      * Defines the timestamp of the oldest data in the card. Use this to show to the end user how fresh the
      * information in the card is.
@@ -1815,7 +1812,7 @@ declare module "sap/f/cards/Header" {
       mParameters?: object
     ): this;
     /**
-     * @EXPERIMENTAL (since 1.81) - this feature is experimental and the API may change.
+     * @EXPERIMENTAL (since 1.81)
      *
      * Gets current value of property {@link #getIconAlt iconAlt}.
      *
@@ -1827,7 +1824,7 @@ declare module "sap/f/cards/Header" {
      */
     getIconAlt(): string;
     /**
-     * @EXPERIMENTAL (since 1.83) - this feature is experimental and the API may change.
+     * @EXPERIMENTAL (since 1.83)
      *
      * Gets current value of property {@link #getIconBackgroundColor iconBackgroundColor}.
      *
@@ -1868,18 +1865,6 @@ declare module "sap/f/cards/Header" {
      * @returns Value of property `iconSrc`
      */
     getIconSrc(): URI;
-    /**
-     * @EXPERIMENTAL (since 1.83) - this feature is experimental and the API may change.
-     *
-     * Gets current value of property {@link #getIconVisible iconVisible}.
-     *
-     * Defines whether the card icon is visible.
-     *
-     * Default value is `true`.
-     *
-     * @returns Value of property `iconVisible`
-     */
-    getIconVisible(): boolean;
     /**
      * Gets current value of property {@link #getStatusText statusText}.
      *
@@ -1935,7 +1920,7 @@ declare module "sap/f/cards/Header" {
      */
     getTitleMaxLines(): int;
     /**
-     * @EXPERIMENTAL (since 1.81) - this feature is experimental and the API may change.
+     * @EXPERIMENTAL (since 1.81)
      *
      * Sets a new value for property {@link #getIconAlt iconAlt}.
      *
@@ -1954,7 +1939,7 @@ declare module "sap/f/cards/Header" {
       sIconAlt?: string
     ): this;
     /**
-     * @EXPERIMENTAL (since 1.83) - this feature is experimental and the API may change.
+     * @EXPERIMENTAL (since 1.83)
      *
      * Sets a new value for property {@link #getIconBackgroundColor iconBackgroundColor}.
      *
@@ -2022,25 +2007,6 @@ declare module "sap/f/cards/Header" {
        * New value for property `iconSrc`
        */
       sIconSrc?: URI
-    ): this;
-    /**
-     * @EXPERIMENTAL (since 1.83) - this feature is experimental and the API may change.
-     *
-     * Sets a new value for property {@link #getIconVisible iconVisible}.
-     *
-     * Defines whether the card icon is visible.
-     *
-     * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-     *
-     * Default value is `true`.
-     *
-     * @returns Reference to `this` in order to allow method chaining
-     */
-    setIconVisible(
-      /**
-       * New value for property `iconVisible`
-       */
-      bIconVisible?: boolean
     ): this;
     /**
      * Sets a new value for property {@link #getStatusText statusText}.
@@ -2182,14 +2148,14 @@ declare module "sap/f/cards/Header" {
     iconInitials?: string | PropertyBindingInfo;
 
     /**
-     * @EXPERIMENTAL (since 1.81) - this feature is experimental and the API may change.
+     * @EXPERIMENTAL (since 1.81)
      *
      * Defines an alt text for the avatar or icon.
      */
     iconAlt?: string | PropertyBindingInfo;
 
     /**
-     * @EXPERIMENTAL (since 1.83) - this feature is experimental and the API may change.
+     * @EXPERIMENTAL (since 1.83)
      *
      * Defines a background color for the avatar or icon.
      */
@@ -2197,13 +2163,6 @@ declare module "sap/f/cards/Header" {
       | (AvatarColor | keyof typeof AvatarColor)
       | PropertyBindingInfo
       | `{${string}}`;
-
-    /**
-     * @EXPERIMENTAL (since 1.83) - this feature is experimental and the API may change.
-     *
-     * Defines whether the card icon is visible.
-     */
-    iconVisible?: boolean | PropertyBindingInfo | `{${string}}`;
 
     /**
      * Fires when the user presses the control.
@@ -2476,8 +2435,7 @@ declare module "sap/f/cards/NumericHeader" {
       | cards.NumericHeaderSideIndicatorsAlignment
       | keyof typeof cards.NumericHeaderSideIndicatorsAlignment;
     /**
-     * @EXPERIMENTAL (since 1.64) - Disclaimer: this property is in a beta state - incompatible API changes
-     * may be done before its official public release. Use at your own discretion.
+     * @EXPERIMENTAL (since 1.64)
      *
      * Gets current value of property {@link #getState state}.
      *
@@ -2691,8 +2649,7 @@ declare module "sap/f/cards/NumericHeader" {
         | keyof typeof cards.NumericHeaderSideIndicatorsAlignment
     ): this;
     /**
-     * @EXPERIMENTAL (since 1.64) - Disclaimer: this property is in a beta state - incompatible API changes
-     * may be done before its official public release. Use at your own discretion.
+     * @EXPERIMENTAL (since 1.64)
      *
      * Sets a new value for property {@link #getState state}.
      *
@@ -2886,8 +2843,7 @@ declare module "sap/f/cards/NumericHeader" {
       | `{${string}}`;
 
     /**
-     * @EXPERIMENTAL (since 1.64) - Disclaimer: this property is in a beta state - incompatible API changes
-     * may be done before its official public release. Use at your own discretion.
+     * @EXPERIMENTAL (since 1.64)
      *
      * The semantic color which represents the state of the main number indicator.
      */
@@ -3020,8 +2976,7 @@ declare module "sap/f/cards/NumericSideIndicator" {
      */
     getNumber(): string;
     /**
-     * @EXPERIMENTAL (since 1.95) - Disclaimer: this property is in a beta state - incompatible API changes
-     * may be done before its official public release. Use at your own discretion.
+     * @EXPERIMENTAL (since 1.95)
      *
      * Gets current value of property {@link #getState state}.
      *
@@ -3060,8 +3015,7 @@ declare module "sap/f/cards/NumericSideIndicator" {
       sValue: string
     ): this;
     /**
-     * @EXPERIMENTAL (since 1.95) - Disclaimer: this property is in a beta state - incompatible API changes
-     * may be done before its official public release. Use at your own discretion.
+     * @EXPERIMENTAL (since 1.95)
      *
      * Sets a new value for property {@link #getState state}.
      *
@@ -3120,8 +3074,7 @@ declare module "sap/f/cards/NumericSideIndicator" {
     unit?: string | PropertyBindingInfo;
 
     /**
-     * @EXPERIMENTAL (since 1.95) - Disclaimer: this property is in a beta state - incompatible API changes
-     * may be done before its official public release. Use at your own discretion.
+     * @EXPERIMENTAL (since 1.95)
      *
      * The semantic color which represents the state of the side indicator.
      */
@@ -3146,7 +3099,7 @@ declare module "sap/f/dnd/GridDropInfo" {
 
   /**
    * @SINCE 1.68
-   * @EXPERIMENTAL (since 1.68) - This class is experimental. The API may change.
+   * @EXPERIMENTAL (since 1.68)
    *
    * Provides enhanced configuration for drop operations inside grid-based controls.
    *
@@ -9309,8 +9262,7 @@ declare module "sap/f/GridContainer" {
      */
     destroyLayoutXL(): this;
     /**
-     * @EXPERIMENTAL (since 1.71) - Disclaimer: this property is in a beta state - incompatible API changes
-     * may be done before its official public release. Use at your own discretion.
+     * @EXPERIMENTAL (since 1.71)
      *
      * Destroys the layoutXS in the aggregation {@link #getLayoutXS layoutXS}.
      *
@@ -9431,7 +9383,7 @@ declare module "sap/f/GridContainer" {
       }
     ): this;
     /**
-     * @EXPERIMENTAL (since 1.81) - Behavior might change.
+     * @EXPERIMENTAL (since 1.81)
      *
      * Focuses the item on the given index. Should be called after successful drop operation.
      *
@@ -9444,7 +9396,7 @@ declare module "sap/f/GridContainer" {
       iIndex: int
     ): void;
     /**
-     * @EXPERIMENTAL (since 1.85) - Behavior might change.
+     * @EXPERIMENTAL (since 1.85)
      *
      * Focuses an item in the given direction - up, down, left or right, from the starting position specified
      * by row and column.
@@ -9478,8 +9430,7 @@ declare module "sap/f/GridContainer" {
      */
     getActiveLayoutSettings(): GridContainerSettings;
     /**
-     * @EXPERIMENTAL (since 1.66) - Disclaimer: this property is in a beta state - incompatible API changes
-     * may be done before its official public release. Use at your own discretion.
+     * @EXPERIMENTAL (since 1.66)
      *
      * Gets current value of property {@link #getAllowDenseFill allowDenseFill}.
      *
@@ -9515,8 +9466,7 @@ declare module "sap/f/GridContainer" {
      */
     getContainerQuery(): boolean;
     /**
-     * @EXPERIMENTAL (since 1.66) - Disclaimer: this property is in a beta state - incompatible API changes
-     * may be done before its official public release. Use at your own discretion.
+     * @EXPERIMENTAL (since 1.66)
      *
      * Gets current value of property {@link #getInlineBlockLayout inlineBlockLayout}.
      *
@@ -9574,8 +9524,7 @@ declare module "sap/f/GridContainer" {
      */
     getLayoutXL(): GridContainerSettings;
     /**
-     * @EXPERIMENTAL (since 1.71) - Disclaimer: this property is in a beta state - incompatible API changes
-     * may be done before its official public release. Use at your own discretion.
+     * @EXPERIMENTAL (since 1.71)
      *
      * Gets content of aggregation {@link #getLayoutXS layoutXS}.
      *
@@ -9583,8 +9532,7 @@ declare module "sap/f/GridContainer" {
      */
     getLayoutXS(): GridContainerSettings;
     /**
-     * @EXPERIMENTAL (since 1.81) - Disclaimer: this property is in a beta state - incompatible API changes
-     * may be done before its official public release.
+     * @EXPERIMENTAL (since 1.81)
      *
      * Gets current value of property {@link #getMinHeight minHeight}.
      *
@@ -9702,8 +9650,7 @@ declare module "sap/f/GridContainer" {
       vItem: int | string | Item
     ): Control | null;
     /**
-     * @EXPERIMENTAL (since 1.66) - Disclaimer: this property is in a beta state - incompatible API changes
-     * may be done before its official public release. Use at your own discretion.
+     * @EXPERIMENTAL (since 1.66)
      *
      * Sets a new value for property {@link #getAllowDenseFill allowDenseFill}.
      *
@@ -9743,8 +9690,7 @@ declare module "sap/f/GridContainer" {
       bContainerQuery?: boolean
     ): this;
     /**
-     * @EXPERIMENTAL (since 1.66) - Disclaimer: this property is in a beta state - incompatible API changes
-     * may be done before its official public release. Use at your own discretion.
+     * @EXPERIMENTAL (since 1.66)
      *
      * Sets a new value for property {@link #getInlineBlockLayout inlineBlockLayout}.
      *
@@ -9822,8 +9768,7 @@ declare module "sap/f/GridContainer" {
       oLayoutXL: GridContainerSettings
     ): this;
     /**
-     * @EXPERIMENTAL (since 1.71) - Disclaimer: this property is in a beta state - incompatible API changes
-     * may be done before its official public release. Use at your own discretion.
+     * @EXPERIMENTAL (since 1.71)
      *
      * Sets the aggregated {@link #getLayoutXS layoutXS}.
      *
@@ -9836,8 +9781,7 @@ declare module "sap/f/GridContainer" {
       oLayoutXS: GridContainerSettings
     ): this;
     /**
-     * @EXPERIMENTAL (since 1.81) - Disclaimer: this property is in a beta state - incompatible API changes
-     * may be done before its official public release.
+     * @EXPERIMENTAL (since 1.81)
      *
      * Sets a new value for property {@link #getMinHeight minHeight}.
      *
@@ -9902,8 +9846,7 @@ declare module "sap/f/GridContainer" {
     width?: CSSSize | PropertyBindingInfo | `{${string}}`;
 
     /**
-     * @EXPERIMENTAL (since 1.81) - Disclaimer: this property is in a beta state - incompatible API changes
-     * may be done before its official public release.
+     * @EXPERIMENTAL (since 1.81)
      *
      * Defines the minimum height of the grid.
      *
@@ -9925,8 +9868,7 @@ declare module "sap/f/GridContainer" {
     snapToRow?: boolean | PropertyBindingInfo | `{${string}}`;
 
     /**
-     * @EXPERIMENTAL (since 1.66) - Disclaimer: this property is in a beta state - incompatible API changes
-     * may be done before its official public release. Use at your own discretion.
+     * @EXPERIMENTAL (since 1.66)
      *
      * Increases the density when arranging the items. Smaller items will take up all of the available space,
      * ignoring their order.
@@ -9936,8 +9878,7 @@ declare module "sap/f/GridContainer" {
     allowDenseFill?: boolean | PropertyBindingInfo | `{${string}}`;
 
     /**
-     * @EXPERIMENTAL (since 1.66) - Disclaimer: this property is in a beta state - incompatible API changes
-     * may be done before its official public release. Use at your own discretion.
+     * @EXPERIMENTAL (since 1.66)
      *
      * Makes the grid items act like an inline-block elements. They will be arranged in rows with height equal
      * to the highest item in the row.
@@ -9964,8 +9905,7 @@ declare module "sap/f/GridContainer" {
     layout?: GridContainerSettings;
 
     /**
-     * @EXPERIMENTAL (since 1.71) - Disclaimer: this property is in a beta state - incompatible API changes
-     * may be done before its official public release. Use at your own discretion.
+     * @EXPERIMENTAL (since 1.71)
      *
      * The sap.f.GridContainerSettings applied for size "XS". Range: up to 374px.
      */
@@ -10030,7 +9970,7 @@ declare module "sap/f/GridContainerItemLayoutData" {
 
   /**
    * @SINCE 1.65
-   * @EXPERIMENTAL (since 1.65) - This class is experimental. The API may change.
+   * @EXPERIMENTAL (since 1.65)
    *
    * Holds layout data for an item inside a `sap.f.GridContainer`.
    */
@@ -10123,7 +10063,7 @@ declare module "sap/f/GridContainerItemLayoutData" {
      */
     getMinRows(): int;
     /**
-     * @EXPERIMENTAL (since 1.65) - this property may soon be removed, use minRows instead
+     * @EXPERIMENTAL (since 1.65)
      *
      * Gets current value of property {@link #getRows rows}.
      *
@@ -10170,7 +10110,7 @@ declare module "sap/f/GridContainerItemLayoutData" {
       iMinRows: int
     ): this;
     /**
-     * @EXPERIMENTAL (since 1.65) - this property may soon be removed, use minRows instead
+     * @EXPERIMENTAL (since 1.65)
      *
      * Sets a new value for property {@link #getRows rows}.
      *
@@ -10206,7 +10146,7 @@ declare module "sap/f/GridContainerItemLayoutData" {
     minRows?: int | PropertyBindingInfo | `{${string}}`;
 
     /**
-     * @EXPERIMENTAL (since 1.65) - this property may soon be removed, use minRows instead
+     * @EXPERIMENTAL (since 1.65)
      *
      * Specifies the number of rows, which the item should take.
      */
@@ -10227,7 +10167,7 @@ declare module "sap/f/GridContainerSettings" {
 
   /**
    * @SINCE 1.65
-   * @EXPERIMENTAL (since 1.65) - This class is experimental. The API may change.
+   * @EXPERIMENTAL (since 1.65)
    *
    * Holds a set of settings that define the dimensions of `sap.f.GridContainer`.
    *
@@ -10762,7 +10702,7 @@ declare module "sap/f/GridList" {
       }
     ): this;
     /**
-     * @EXPERIMENTAL (since 1.87) - Behavior might change.
+     * @EXPERIMENTAL (since 1.87)
      *
      * Focuses an item in the given direction - up, down, left or right, from the starting position specified
      * by row and column.
@@ -11257,8 +11197,7 @@ declare module "sap/f/ProductSwitch" {
 
   /**
    * @SINCE 1.72
-   * @EXPERIMENTAL (since 1.72) - This class is experimental and provides only limited functionality. Also
-   * the API might be changed in future.
+   * @EXPERIMENTAL (since 1.72)
    *
    * A layout control that provides specific configuration about how the items should be displayed.
    */
@@ -11525,8 +11464,7 @@ declare module "sap/f/ProductSwitchItem" {
 
   /**
    * @SINCE 1.72
-   * @EXPERIMENTAL (since 1.72) - This class is experimental and provides only limited functionality. Also
-   * the API might be changed in future.
+   * @EXPERIMENTAL (since 1.72)
    *
    * A control that is used as a child of `ProductSwitch`
    *
@@ -18950,8 +18888,7 @@ declare module "sap/f/SidePanel" {
 
   /**
    * @SINCE 1.107
-   * @EXPERIMENTAL (since 1.107) - This class is experimental and provides only limited functionality. Also
-   * the API might be changed in future.
+   * @EXPERIMENTAL (since 1.107)
    *
    * Overview:
    *
@@ -19480,8 +19417,7 @@ declare module "sap/f/SidePanelItem" {
 
   /**
    * @SINCE 1.107
-   * @EXPERIMENTAL (since 1.107) - This class is experimental and provides only limited functionality. Also
-   * the API might be changed in future.
+   * @EXPERIMENTAL (since 1.107)
    *
    * Overview:
    *

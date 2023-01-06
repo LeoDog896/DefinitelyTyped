@@ -8,6 +8,7 @@
         "only-arrow-functions": false,
         "space-within-parens": false,
         "strict-export-declare-modifiers": false,
+        "trim-file": false,
         "whitespace": false
     }
 }

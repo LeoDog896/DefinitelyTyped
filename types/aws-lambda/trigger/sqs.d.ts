@@ -30,7 +30,6 @@ export interface SQSRecordAttributes {
     SequenceNumber?: string | undefined;
     MessageGroupId?: string | undefined;
     MessageDeduplicationId?: string | undefined;
-    DeadLetterQueueSourceArn?: string | undefined; // Undocumented, but used by AWS to support their re-drive functionality in the console
 }
 
 export type SQSMessageAttributeDataType = 'String' | 'Number' | 'Binary' | string;

@@ -5,6 +5,7 @@
         "no-var-keyword": false,
         "prefer-const": false,
         "semicolon": false,
-        "strict-export-declare-modifiers": false
+        "strict-export-declare-modifiers": false,
+        "trim-file": false
     }
 }

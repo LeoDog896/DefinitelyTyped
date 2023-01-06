@@ -15,6 +15,7 @@
         "one-variable-per-declaration": false,
         "only-arrow-functions": false,
         "space-before-function-paren": false,
+        "trim-file": false,
         "triple-equals": false,
         "unified-signatures": false
     }

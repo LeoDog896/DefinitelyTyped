@@ -1,6 +1,7 @@
 import got = require('got');
 import cookie = require('cookie');
 import FormData = require('form-data');
+import Keyv = require('keyv');
 import * as fs from 'fs';
 import * as http from 'http';
 import * as https from 'https';
@@ -245,13 +246,8 @@ got('todomvc', {
     cache: new Map(),
 }).then(res => res.fromCache);
 
-declare const customCache: {
-    set(key: string, value: any, ttl?: number): void;
-    get(key: string): any;
-    delete(key: string): void;
-};
 got('todomvc', {
-    cache: customCache
+    cache: new Keyv(),
 }).then(res => res.fromCache);
 
 got(new url.URL('http://todomvc.com'));

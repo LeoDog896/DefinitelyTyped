@@ -9,6 +9,7 @@
         "no-unnecessary-qualifier": false,
         "no-var-keyword": false,
         "space-before-function-paren": false,
-        "strict-export-declare-modifiers": false
+        "strict-export-declare-modifiers": false,
+        "trim-file": false
     }
 }

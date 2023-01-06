@@ -7,6 +7,7 @@
         "one-line": false,
         "only-arrow-functions": false,
         "prefer-template": false,
-        "space-before-function-paren": false
+        "space-before-function-paren": false,
+        "trim-file": false
     }
 }

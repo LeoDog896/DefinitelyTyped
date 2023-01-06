@@ -2,7 +2,6 @@
 // Project: https://github.com/andreyvit/json-diff
 // Definitions by: Tommy Wong <https://github.com/wchtommy20013/>
 //                 Jerryh001 <https://github.com/Jerryh001>
-//                 HoldYourWaffle <https://github.com/HoldYourWaffle>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 export interface DiffOptions {
@@ -14,10 +13,7 @@ export interface DiffOptions {
     outputKeys?: string[];
     keepUnchangedValues?: boolean;
     outputNewOnly?: boolean;
-    maxElisions?: number;
-    precision?: number;
 }
-
 export interface DiffStringOptions extends DiffOptions {
     color?: boolean;
 }

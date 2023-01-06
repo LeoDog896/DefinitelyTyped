@@ -9,6 +9,7 @@
         "no-var-keyword": false,
         "one-line": false,
         "only-arrow-functions": false,
-        "semicolon": false
+        "semicolon": false,
+        "trim-file": false
     }
 }

@@ -5,6 +5,7 @@
         "no-consecutive-blank-lines": false,
         "no-internal-module": false,
         "no-unnecessary-qualifier": false,
-        "no-var-keyword": false
+        "no-var-keyword": false,
+        "trim-file": false
     }
 }

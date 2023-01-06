@@ -11,7 +11,4 @@ export class OctreeHelper extends LineSegments {
      * @default 'OctreeHelper'
      */
     type: 'OctreeHelper' | string;
-
-    update(): void;
-    dispose(): void;
 }

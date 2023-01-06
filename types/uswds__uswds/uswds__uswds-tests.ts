@@ -7,10 +7,7 @@ import {
     dateRangePicker,
     fileInput,
     footer,
-    inPageNavigation,
-    inputMask,
     inputPrefixSuffix,
-    languageSelector,
     modal,
     navigation,
     password,
@@ -43,17 +40,11 @@ banner.on(element); // $ExpectType void
 banner.off(element); // $ExpectType void
 
 // Character Count
-characterCount.DEFAULT_STATUS_LABEL; // $ExpectType string
-characterCount.MESSAGE_INVALID_CLASS; // $ExpectType string
-characterCount.STATUS_MESSAGE_CLASS; // $ExpectType string
-characterCount.STATUS_MESSAGE_SR_ONLY_CLASS; // $ExpectType string
-characterCount.VALIDATION_MESSAGE; // $ExpectType string
 characterCount.init(element); // $ExpectType void
+characterCount.MESSAGE_INVALID_CLASS; // $ExpectType string
+characterCount.MESSAGE_INVALID_CLASS; // $ExpectType string
 characterCount.on(element); // $ExpectType void
 characterCount.off(element); // $ExpectType void
-characterCount.createStatusMessages(element); // $ExpectType void
-characterCount.getCountMessage(2, 25); // $ExpectType string
-characterCount.updateCountMessage(input); // $ExpectType void
 
 // Combo Box
 comboBox.init(element); // $ExpectType void
@@ -119,52 +110,27 @@ dateRangePicker.off(element); // $ExpectType void
 
 // File Input
 fileInput.init(element); // $ExpectType void
-fileInput.teardown(element); // $ExpectType void
 fileInput.on(element); // $ExpectType void
 fileInput.off(element); // $ExpectType void
-/*
-$ExpectType {
-    dropZoneEl: HTMLDivElement;
-    inputEl: HTMLInputElement;
-}
-*/
-fileInput.getFileInputContext(element);
+fileInput.getFileInputContext(element); // $ExpectType { dropZoneEl: HTMLDivElement; inputEl: HTMLInputElement; }
 fileInput.disable(input); // $ExpectType void
 fileInput.enable(input); // $ExpectType void
 
 // Footer
 footer.HIDE_MAX_WIDTH; // $ExpectType number
-footer.init(); // $ExpectType void
+footer.init(element); // $ExpectType void
 footer.on(element); // $ExpectType void
 footer.off(element); // $ExpectType void
 footer.teardown(); // $ExpectType void
-
-// In Page Navigation
-inPageNavigation.init(element); // $ExpectType void
-inPageNavigation.on(element); // $ExpectType void
-inPageNavigation.off(element); // $ExpectType void
-
-// Input Mask
-inputMask.init(element); // $ExpectType void
-inputMask.on(element); // $ExpectType void
-inputMask.off(element); // $ExpectType void
 
 // Input Prefix Suffix
 inputPrefixSuffix.init(element); // $ExpectType void
 inputPrefixSuffix.on(element); // $ExpectType void
 inputPrefixSuffix.off(element); // $ExpectType void
 
-// Language Selector
-languageSelector.focusTrap; // $ExpectType null
-languageSelector.init(element); // $ExpectType void
-languageSelector.teardown(); // $ExpectType void
-languageSelector.on(element); // $ExpectType void
-languageSelector.off(element); // $ExpectType void
-
 // Modal
 modal.focusTrap; // $ExpectType null
 modal.init(element); // $ExpectType void
-modal.teardown(element); // $ExpectType void
 modal.on(element); // $ExpectType void
 modal.off(element); // $ExpectType void
 modal.toggleModal(new KeyboardEvent('keydown')); // $ExpectType boolean
@@ -200,14 +166,7 @@ table.on(element); // $ExpectType void
 table.off(element); // $ExpectType void
 
 // Time Picker
-/*
-$ExpectType {
-    filter: string;
-    apQueryFilter: string;
-    hourQueryFilter: string;
-    minuteQueryFilter: string;
-}
-*/
+// $ExpectType { filter: string; apQueryFilter: string; hourQueryFilter: string; minuteQueryFilter: string; }
 timePicker.FILTER_DATASET;
 timePicker.init(element); // $ExpectType void
 timePicker.on(element); // $ExpectType void
@@ -217,27 +176,7 @@ timePicker.off(element); // $ExpectType void
 tooltip.init(element); // $ExpectType void
 tooltip.on(element); // $ExpectType void
 tooltip.off(element); // $ExpectType void
-tooltip.show(element); // $ExpectType void
-tooltip.hide(element); // $ExpectType void
-/*
-$ExpectType {
-    tooltipBody: HTMLSpanElement;
-    position: string;
-    tooltipContent: string;
-    wrapper: HTMLSpanElement;
-}
-*/
-tooltip.setup(element);
-/*
-$ExpectType {
-    trigger: Element;
-    wrapper: HTMLElement;
-    body: HTMLElement;
-}
-*/
-tooltip.getTooltipElements(element);
 
 // Validator
-validator.init(element); // $ExpectType void
 validator.on(element); // $ExpectType void
 validator.off(element); // $ExpectType void

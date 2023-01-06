@@ -22,6 +22,7 @@
         "semicolon": false,
         "space-within-parens": false,
         "strict-export-declare-modifiers": false,
+        "trim-file": false,
         "unified-signatures": false
     }
 }

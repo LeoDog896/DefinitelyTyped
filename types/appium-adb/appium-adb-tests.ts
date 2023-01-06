@@ -115,6 +115,5 @@ adb.powerAC(adb.POWER_AC_STATES.POWER_AC_ON);
 let devices = adb.getConnectedDevices();
 const verboseDevices: Promise<VerboseDevice[]> = adb.getConnectedDevices({ verbose: true });
 devices = verboseDevices;
-adb.waitForEmulatorReady(60000);
 
 const copy: ADB = adb.clone();

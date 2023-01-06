@@ -13,6 +13,11 @@
             "../"
         ],
         "types": [],
+        "paths": {
+            "@keyv/*": [
+                "keyv__*"
+            ]
+        },
         "noEmit": true,
         "forceConsistentCasingInFileNames": true
     },

@@ -1,4 +1,4 @@
-// Type definitions for steam-user 4.26
+// Type definitions for steam-user 4.23
 // Project: https://github.com/DoctorMcKay/node-steam-user
 // Definitions by: Joshua Jeschek <https://github.com/joshuajeschek>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
@@ -912,7 +912,6 @@ interface Options {
     localPort?: number | null;
     protocol?: SteamUser.EConnectionProtocol;
 	httpProxy?: string | null;
-    socksProxy?: string | null;
 	localAddress?: string | null;
 	autoRelogin?: boolean;
 	singleSentryfile?: boolean;

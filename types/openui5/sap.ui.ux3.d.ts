@@ -1,9 +1,9 @@
-// For Library Version: 1.108.0
+// For Library Version: 1.107.0
 
 declare module "sap/ui/ux3/library" {
   /**
    * @deprecated (since 1.38)
-   * @EXPERIMENTAL (since 1.2) - API is not yet finished and might change completely
+   * @EXPERIMENTAL (since 1.2)
    *
    * Enumeration of available standard actions for 'sap.ui.ux3.ActionBar'. To be used as parameters for function
    * 'sap.ui.ux3.ActionBar.getSocialAction'.
@@ -57,9 +57,7 @@ declare module "sap/ui/ux3/library" {
   }
   /**
    * @deprecated (since 1.38)
-   * @EXPERIMENTAL (since 1.2) - The whole Feed/Feeder API is still under discussion, significant changes
-   * are likely. Especially text presentation (e.g. @-references and formatted text) is not final. Also the
-   * Feed model topic is still open.
+   * @EXPERIMENTAL (since 1.2)
    *
    * Type of a Feeder.
    */
@@ -3532,7 +3530,7 @@ declare module "sap/ui/ux3/Exact" {
 
   /**
    * @deprecated (since 1.38)
-   * @EXPERIMENTAL (since 1.2) - API is not yet finished and might change completely
+   * @EXPERIMENTAL (since 1.2)
    *
    * A comprehensive UI design approach with graphical and functional elements for searching data, exploring
    * data, and acting on the data ("Explore and Act (Exact) Pattern").
@@ -3935,7 +3933,7 @@ declare module "sap/ui/ux3/ExactArea" {
 
   /**
    * @deprecated (since 1.38)
-   * @EXPERIMENTAL (since 1.6) - API is not yet finished and might change completely
+   * @EXPERIMENTAL (since 1.6)
    *
    * Consists of two sections: A tool bar and a content area where arbitrary controls can be added. The ExactArea
    * is intended to be used for the Exact design approach but alternatively also in a stand alone version.
@@ -6534,9 +6532,7 @@ declare module "sap/ui/ux3/Feed" {
 
   /**
    * @deprecated (since 1.38) - Instead, use **any** `sap.ui.layout` container control.
-   * @EXPERIMENTAL (since 1.2) - The whole Feed/Feeder API is still under discussion, significant changes
-   * are likely. Especially text presentation (e.g. @-references and formatted text) is not final. Also the
-   * Feed model topic is still open.
+   * @EXPERIMENTAL (since 1.2)
    *
    * A container control representing a full feed page, including feeder and updates.
    */
@@ -7460,9 +7456,7 @@ declare module "sap/ui/ux3/FeedChunk" {
 
   /**
    * @deprecated (since 1.38) - Instead, use the `sap.m.FeedListItem` control.
-   * @EXPERIMENTAL (since 1.2) - The whole Feed/Feeder API is still under discussion, significant changes
-   * are likely. Especially text presentation (e.g. @-references and formatted text) is not final. Also the
-   * Feed model topic is still open.
+   * @EXPERIMENTAL (since 1.2)
    *
    * The unit that is embedded - single-wise or in a multiple way - into a Feed control. The control provides
    * a set of properties for text, sender information, time stamp, comments, and functions such as flagging
@@ -9006,9 +9000,7 @@ declare module "sap/ui/ux3/Feeder" {
 
   /**
    * @deprecated (since 1.38) - Instead, use the `sap.m.FeedInput` control.
-   * @EXPERIMENTAL (since 1.2) - The whole Feed/Feeder API is still under discussion, significant changes
-   * are likely. Especially text presentation (e.g. @-references and formatted text) is not final. Also the
-   * Feed model topic is still open.
+   * @EXPERIMENTAL (since 1.2)
    *
    * This feed control flavor represents a lean common feed, or a comment feed, with a text commit function.
    * The control can be used stand alone or in a multiple way, and generally would be integrated directly
@@ -18063,8 +18055,7 @@ declare namespace sap {
     namespace ux3 {
       /**
        * @deprecated (since 1.36) - This class was never released for productive use and will never be.
-       * @EXPERIMENTAL (since 1.0) - The Shell-features Personalization, Color Picker and “Inspect”-Tool are only
-       * experimental work and might change or disappear in future versions.
+       * @EXPERIMENTAL (since 1.0)
        *
        * Experimental implementation of visual Ux3 Shell personalization / branding.
        *

@@ -1,4 +1,4 @@
-// Type definitions for staticmaps 1.10
+// Type definitions for staticmaps 1.5
 // Project: https://github.com/StephanGeorg/staticmaps#readme
 // Definitions by: Olivier Kamers <https://github.com/olivierkamers>
 //                 Piotr Błażejewicz <https://github.com/peterblazejewicz>
@@ -14,7 +14,6 @@ declare class StaticMaps {
     addMultiPolygon: (options: StaticMaps.AddMultiPolygonOptions) => void;
     addMarker: (options: StaticMaps.AddMarkerOptions) => void;
     addText: (options: StaticMaps.AddTextOptions) => void;
-    addCircle: (options: StaticMaps.AddCircleOptions) => void;
     render: (center?: ReadonlyArray<number>, zoom?: number) => Promise<void>;
     image: StaticMapsImage;
 }
@@ -41,7 +40,7 @@ declare namespace StaticMaps {
          * Subdomains of tile server
          * @default []
          */
-        tileSubdomains?: string[] | undefined;
+        subdomains?: string[] | undefined;
         tileRequestTimeout?: number | undefined;
         tileRequestHeader?: object | undefined;
         /**
@@ -108,26 +107,6 @@ declare namespace StaticMaps {
         | 'start'
         | 'middle'
         | 'end';
-
-    interface AddCircleOptions {
-        coord: [number, number];
-        radius: number;
-        /**
-         * Stroke color of the circle
-         * @default '#000000BB'
-         */
-        color?: string | undefined;
-        /**
-         * Stroke width of circle
-         * @default 3
-         */
-        width?: number | undefined;
-        /**
-         * Fill color of the circle
-         * @default '#AA0000BB'
-         */
-        fill?: string | undefined;
-    }
 }
 
 export = StaticMaps;

@@ -32,11 +32,12 @@ export function withWizard<P>(
     component: React.ComponentType<P & WizardComponentProps>
 ): React.ComponentType<P>;
 
-export type WizardProps = {
+export interface WizardProps {
     onNext?: ((wizard: WizardContext) => void) | undefined;
+    render?: ((wizard: WizardContext) => React.ReactNode) | undefined;
     history?: History | undefined;
     basename?: string | undefined;
-} & WizardContextRenderProps;
+}
 
 export const Wizard: React.ComponentType<WizardProps>;
 

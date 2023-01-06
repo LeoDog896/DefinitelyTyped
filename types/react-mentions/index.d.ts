@@ -101,9 +101,7 @@ export interface MentionProps {
 export interface MentionItem {
     display: string;
     id: string;
-    childIndex: number;
-    index: number;
-    plainTextIndex: number;
+    type: null;
 }
 
 /**

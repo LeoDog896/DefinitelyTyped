@@ -6,6 +6,7 @@
         "no-single-declare-module": false,
         "no-var-keyword": false,
         "prefer-const": false,
+        "trim-file": false,
         "typedef-whitespace": false,
         "whitespace": false
     }

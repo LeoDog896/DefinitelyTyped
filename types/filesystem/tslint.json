@@ -9,6 +9,7 @@
         "one-line": false,
         "only-arrow-functions": false,
         "space-before-function-paren": false,
+        "trim-file": false,
         "typedef-whitespace": false,
         "whitespace": false
     }

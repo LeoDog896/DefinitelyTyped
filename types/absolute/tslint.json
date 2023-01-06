@@ -6,6 +6,7 @@
             {
                 "mode": "name-only"
             }
-        ]
+        ],
+        "trim-file": false
     }
 }

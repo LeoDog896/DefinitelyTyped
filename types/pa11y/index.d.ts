@@ -4,7 +4,8 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 3.0
 
-import { Browser, Page, Viewport } from "puppeteer";
+import { Browser, Page, } from "puppeteer";
+import { Viewport } from "puppeteer/DeviceDescriptors";
 
 type AccessibilityStandard = "Section508" | "WCAG2A" | "WCAG2AA" | "WCAG2AAA";
 

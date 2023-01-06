@@ -114,7 +114,7 @@ declare var AbortController: {
 declare var AbortSignal: {
     prototype: AbortSignal;
     new(): AbortSignal;
-    abort(reason?: any): AbortSignal;
+    // TODO: Add abort() static
     timeout(milliseconds: number): AbortSignal;
 };
 //#endregion borrowed

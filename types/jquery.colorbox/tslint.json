@@ -13,6 +13,7 @@
         "prefer-const": false,
         "prefer-template": false,
         "space-before-function-paren": false,
+        "trim-file": false,
         "typedef-whitespace": false,
         "unified-signatures": false
     }

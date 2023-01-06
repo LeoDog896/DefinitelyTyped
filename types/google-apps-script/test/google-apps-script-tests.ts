@@ -92,11 +92,9 @@ const listAllUsers = () => {
 
 // doPost function
 function doPost(e: GoogleAppsScript.Events.DoPost) {
-    const path: string = e.pathInfo;
     const data: string = e.postData.contents;
     const param: string = e.parameter.param;
     const paramArray: string[] = e.parameters.param;
-    Logger.log(path);
     Logger.log(JSON.parse(data));
     Logger.log(param);
     Logger.log(paramArray);
@@ -104,10 +102,8 @@ function doPost(e: GoogleAppsScript.Events.DoPost) {
 
 // doGet function
 function doGet(e: GoogleAppsScript.Events.DoGet) {
-    const path: string = e.pathInfo;
     const param: string = e.parameter.param;
     const paramArray: string[] = e.parameters.param;
-    Logger.log(path);
     Logger.log(param);
     Logger.log(paramArray);
 }

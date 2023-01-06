@@ -13,6 +13,7 @@
         "only-arrow-functions": false,
         "prefer-const": false,
         "semicolon": false,
-        "space-before-function-paren": false
+        "space-before-function-paren": false,
+        "trim-file": false
     }
 }

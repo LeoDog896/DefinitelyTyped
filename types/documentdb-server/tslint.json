@@ -24,6 +24,7 @@
         "prefer-const": false,
         "semicolon": false,
         "space-before-function-paren": false,
+        "trim-file": false,
         "triple-equals": false,
         "unified-signatures": false
     }

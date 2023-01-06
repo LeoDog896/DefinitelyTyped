@@ -3,11 +3,11 @@ import {
     roleElements,
     roles,
     ARIARoleDefinition,
-    ARIARoleDefinitionKey,
+    ARIARoleDefintionKey,
     ARIARoleRelation,
 } from 'aria-query';
 
-function prettyRole(roleName: ARIARoleDefinitionKey) {
+function prettyRole(roleName: ARIARoleDefintionKey) {
     const role = roles.get(roleName)!;
     console.log(`prohibited props: ${Object.keys(role.prohibitedProps).join(', ')}`);
     console.log(`required props: ${Object.keys(role.requiredProps).join(', ')}`);

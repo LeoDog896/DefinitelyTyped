@@ -11,6 +11,7 @@
         "no-var-keyword": false,
         "object-literal-key-quotes": false,
         "only-arrow-functions": false,
-        "prefer-const": false
+        "prefer-const": false,
+        "trim-file": false
     }
 }

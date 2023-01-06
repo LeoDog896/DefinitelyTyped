@@ -338,7 +338,6 @@ str = range.toString();
 bool = range.test(ver);
 bool = range.intersects(new semver.Range(''));
 bool = range.intersects(new semver.Range(''), bool);
-bool = range.intersects(new semver.Range('', { includePrerelease: true }));
 
 const sets: ReadonlyArray<ReadonlyArray<semver.Comparator>> = range.set;
 

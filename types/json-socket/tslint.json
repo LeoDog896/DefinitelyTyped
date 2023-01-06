@@ -4,6 +4,7 @@
         "jsdoc-format": false,
         "no-consecutive-blank-lines": false,
         "no-padding": false,
-        "prefer-const": false
+        "prefer-const": false,
+        "trim-file": false
     }
 }

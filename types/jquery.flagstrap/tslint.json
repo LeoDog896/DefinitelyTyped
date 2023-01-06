@@ -16,6 +16,7 @@
         "prefer-template": false,
         "semicolon": false,
         "space-before-function-paren": false,
+        "trim-file": false,
         "unified-signatures": false,
         "void-return": false
     }

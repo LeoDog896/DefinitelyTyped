@@ -30,7 +30,7 @@ interface IYelpDataExtended {
 
 /********************************************************
  *                            *
- *  dc.js example using Yelp Kaggle Test Dataset    *
+ *  dj.js example using Yelp Kaggle Test Dataset    *
  *  Eamonn O'Loughlin 9th May 2013            *
  *                            *
  ********************************************************/
@@ -40,8 +40,7 @@ interface IYelpDataExtended {
  *  Step0: Load data from json file           *
  *                            *
  ********************************************************/
-d3.json<IYelpData[]>("data/yelp_test_set_business.json").then((yelp_data) => {
-    if (yelp_data == null) return
+d3.json("data/yelp_test_set_business.json", (yelp_data:IYelpData[]) => {
 
     /********************************************************
      *                           *
@@ -108,8 +107,6 @@ d3.json<IYelpData[]>("data/yelp_test_set_business.json").then((yelp_data) => {
      *                           *
      ********************************************************/
 
-    var x = d3.scaleLinear().domain([0, 5.5])
-    var xAxis = d3.axisBottom(x)
     bubbleChart
         .width(650)
         .height(300)
@@ -118,10 +115,9 @@ d3.json<IYelpData[]>("data/yelp_test_set_business.json").then((yelp_data) => {
         .transitionDuration(1500)
         .colors(["#a60000","#ff0000", "#ff4040","#ff7373","#67e667","#39e639","#00cc00"])
         .colorDomain([-12000, 12000])
-        .x(x)
-        .xAxis(xAxis)
-        .y(d3.scaleLinear().domain([0, 5.5]))
-        .r(d3.scaleLinear().domain([0, 2500]))
+        .x(d3.scale.linear().domain([0, 5.5]))
+        .y(d3.scale.linear().domain([0, 5.5]))
+        .r(d3.scale.linear().domain([0, 2500]))
         .keyAccessor((p: any) => p.value.star_avg)
         .valueAccessor((p: any) => p.value.review_avg)
         .radiusValueAccessor((p: any) => p.value.count)
@@ -160,7 +156,7 @@ d3.json<IYelpData[]>("data/yelp_test_set_business.json").then((yelp_data) => {
         .transitionDuration(1500)
         .centerBar(true)
         .gap(17)
-        .x(d3.scaleLinear().domain([0.5, 5.5]))
+        .x(d3.scale.linear().domain([0.5, 5.5]))
         .elasticY(true)
         .on("filtered", (chart: dc.BarChart) =>
             dc.events.trigger(() => {
@@ -182,7 +178,7 @@ d3.json<IYelpData[]>("data/yelp_test_set_business.json").then((yelp_data) => {
         .height(200)
         .dimension(startValue)
         .group(startValueGroup)
-        .x(d3.scaleLinear().domain([0.5, 5.5]))
+        .x(d3.scale.linear().domain([0.5, 5.5]))
         .valueAccessor((d: any) => d.value)
         .renderHorizontalGridLines(true)
         .elasticY(true)
