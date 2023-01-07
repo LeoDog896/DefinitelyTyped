@@ -1,23 +1,49 @@
 import thenify = require('thenify');
 
-const multiArgs = thenify((a: number, b: number, c: number, callback: (err: unknown, a: number, b: number, c: number) => void) => {
-  callback(null, a + 1, b + 1, c + 1);
-}, { withCallback: true });
+// callbacks
+{
+  // multiple args
+  {
+    const multiArgs = thenify((a: number, b: number, c: number, callback: (err: unknown, a: number, b: number, c: number) => void) => {
+      callback(null, a + 1, b + 1, c + 1);
+    }, { withCallback: true });
 
+    // $ExpectType Promise<[err: unknown, a: number, b: number, c: number]>
+    multiArgs(5, 6, 7);
 
-multiArgs(5, 6, 7).then(([_, a, b, c]) => [a, b, c, "cat"]).catch(() => void 0);
-multiArgs(6, 7, 8, ([_, a, b, c]) => [a, b, c, "dog"]);
+    // $ExpectType Promise<(string | number)[] | undefined>
+    multiArgs(5, 6, 7).then(([_, a, b, c]) => [a, b, c, "cat"]).catch(() => void 0);
 
-const singleArg = thenify((num: number, callback: (num: number) => unknown) => {
-  callback(num / 2);
-}, { withCallback: true })
+    // $ExpectType void
+    multiArgs(6, 7, 8, ([_, a, b, c]) => [a, b, c, "dog"]);
 
-singleArg(4).then(n => [n * 5])
-singleArg(2, x => x + 2);
+    // @ts-expect-error
+    multiArgs(5, 3);
+  }
 
-const noArg = thenify((callback: () => unknown) => {
-  callback();
-}, { withCallback: true })
+  // single arg
+  {
+    const singleArg = thenify((num: number, callback: (num: number) => unknown) => {
+      callback(num / 2);
+    }, { withCallback: true });
 
-noArg().then(() => void 0)
-noArg(() => void 0)
+    // $ExpectType Promise<number[]>
+    singleArg(4).then(n => [n * 5]);
+
+    // $ExpectType void
+    singleArg(2, x => x + 2);
+  }
+
+  // no args
+  {
+    const noArg = thenify((callback: () => unknown) => {
+      callback();
+    }, { withCallback: true });
+
+    // $ExpectType Promise<undefined>
+    noArg().then(() => void 0);
+
+    // $ExpectType void
+    noArg(() => void 0);
+  }
+}
